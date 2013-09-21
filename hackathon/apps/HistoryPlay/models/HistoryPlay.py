@@ -32,7 +32,7 @@ class HistoryPlay(models.Model):
     )
     status = models.IntegerField(
         choices=STATUS_CHOICES,
-        default=STATUS_ACTIVE,
+        default=STATUS_INCOMPLETE,
         editable=False,
         null=False,
     )
