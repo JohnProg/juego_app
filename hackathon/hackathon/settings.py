@@ -1,7 +1,9 @@
 # Django settings for hackathon project.
-
+from os.path import join, dirname, realpath
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+PROJECT_ROOT = realpath(join(dirname(__file__), '../..'))
+ROOT_PATH = realpath(join(dirname(__file__), '..'))
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -11,16 +13,20 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'historyplay',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
+        'USER': 'root',
+        'PASSWORD': '123456',
         'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
 }
 
+
+PANEL_PAGE_SIZE = 10
+DEFAULT_PAGE_SIZE = 10
+LOGIN_URL = '/login/'
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -72,6 +78,8 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    join(ROOT_PATH, 'static'),
+    join(ROOT_PATH, 'media')
 )
 
 # List of finder classes that know how to find static files in
@@ -121,6 +129,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.HistoryPlay',
+    'apps.common',
+    'south',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
