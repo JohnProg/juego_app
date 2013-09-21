@@ -122,6 +122,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'apps.HistoryPlay',
     'apps.common',
+    'south',
+    'crispy_forms',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
