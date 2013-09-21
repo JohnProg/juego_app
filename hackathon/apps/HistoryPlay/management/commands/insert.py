@@ -2,8 +2,11 @@ from django.core.management.base import BaseCommand
 from optparse import make_option
 from apps.sp.tests.Helpers.data_helpers.criterion_category import CriterionCategoryHelper
 from apps.common.insert_helper import CriterionHelper, CriterionDetailHelper
-from apps.sp.models.CriterionCategory import CriterionCategory
-from apps.sp.models.Criterion import Criterion
+from apps.HistoryPlay.models.Category import Category
+from apps.HistoryPlay.models.Answer import Answer
+from apps.HistoryPlay.models.HistoryPlay import HistoryPlay
+from apps.HistoryPlay.models.Place import Place
+from apps.HistoryPlay.models.Question import Question
 
 
 class Command(BaseCommand):
@@ -24,20 +27,19 @@ class Command(BaseCommand):
             self.data_delete = True
 
         if entity == 'all':
-            self.insert_criterion_category()
-            self.insert_criterion()
-            self.insert_criterion_detail()
+            self.insert_category()
+            # self.insert_arqueologia()
+            # self.insert_momnumentos()
+            # self.insert_museo()
 
-        if entity == 'criterion_category':
-            self.insert_criterion_category()
+    def insert_category(self):
+        if self.data_delete:
+            C.objects.all().delete()
+            self.stdout.write('delete data: criterion category. \n')
+        else:
 
-        if entity == 'criterion':
-            self.insert_criterion()
 
-        if entity == 'criterion_detail':
-            self.insert_criterion_detail()
-
-    def insert_criterion_category(self):
+    def insert_arqueologia(self):
         if self.data_delete:
             CriterionCategory.objects.all().delete()
             self.stdout.write('delete data: criterion category. \n')
@@ -50,20 +52,3 @@ class Command(BaseCommand):
             else:
                 self.stdout.write('can not insert the data: criterion category. \n')
 
-    def insert_criterion(self):
-        if self.data_delete:
-            Criterion.objects.all().delete()
-            self.stdout.write('delete data: criterion. \n')
-        else:
-            criterion_helper = CriterionHelper()
-            criterion_helper.insert_data()
-            self.stdout.write('Successfully inserted data criterion. \n')
-
-    def insert_criterion_detail(self):
-        if self.data_delete:
-            Criterion.objects.all().delete()
-            self.stdout.write('delete data: criterion. \n')
-        else:
-            criterion_detail_helper = CriterionDetailHelper()
-            criterion_detail_helper.insert_data()
-            self.stdout.write('Successfully inserted data criterion detail. \n')
