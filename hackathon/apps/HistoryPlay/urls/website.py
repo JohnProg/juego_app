@@ -16,7 +16,7 @@ urlpatterns = patterns('',
         name='map'),
 
     #JSON RESPONSE
-    url(r'^json/categories/$',
-        h.CategoryJsonView.as_view(),
-        name='json-category'),
+    url(r'^json/history-pllay/$',
+        h.HistoryPlayJsonView.as_view(),
+        name='json-history-play'),
 )
