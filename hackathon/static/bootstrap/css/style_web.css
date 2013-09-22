@@ -19,12 +19,19 @@
 }
 .item img{
     height: 100% !important;
+    width: 100%;
 }
 .carousel-inner {
     height: 100%;
 }
+.carousel-control {
+    z-index: 9;
+}
+.btn.btn-large.btn-inverse {
+    z-index: 9;
+}
 .section {
-    mmargin: 0 auto;
+    margin: 0 auto;
 width: 100%;
 text-align: center;
 padding-top: 4em;

@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
+import json
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from django.views.generic.base import View
+from django.contrib.auth.hashers import make_password
+from django.http import Http404, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -17,18 +20,31 @@ class SignUp(View):
 
     def post(self, request, *args, **kwargs):
         response = {}
+        username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
         try:
-            user = User.objects.get(email=email)
+            user = User.objects.get(email=email )
             if user:
-                pass
-                #devolver json que usuario ya existe
+                response['status'] = 'ERROR'
+                response['message'] = 'correo ya existe'
+                return HttpResponse(json.dumps(response))
+            user = User.objects.get(username=username)
+            if user:
+                response['status'] = 'ERROR'
+                response['message'] = 'username ya existe'
+                return HttpResponse(json.dumps(response))
         except ObjectDoesNotExist:
             pass
-        user = User.objects.create_user('john', email, password)
+        password = make_password(password)
+        user = User.objects.create_user(username, email, password)
+        self.login_and_authenticate(user)
 
-    def login_and_authenticate(self, user, manufacturer):
+        response['status'] = 'OK'
+        response['message'] = 'Bienvenido'
+        return HttpResponse(json.dumps(response))
+
+    def login_and_authenticate(self, user):
         user = auth.authenticate(
             username=user.username, password=user.password)
         if user is not None and user.is_active:
