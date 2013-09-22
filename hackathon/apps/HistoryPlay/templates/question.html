@@ -159,28 +159,28 @@ max-height: 60%;
           <div class="tab-pane active" id="q1">
               <form>
                   <header>
-                      <h4 class="question"></h4>
+                      <h4 class="question1"></h4>
                   </header>
                </form>
           </div>
           <div class="tab-pane" id="q2">
                <form>
                   <header>
-                      <h4 class="question"></h4>
+                      <h4 class="question2"></h4>
                   </header>
                </form>
           </div>
           <div class="tab-pane" id="q3">
                <form>
                   <header>
-                      <h4 class="question"></h4>
+                      <h4 class="question3"></h4>
                   </header>
                </form>
           </div>
           <div class="tab-pane" id="q4">
                <form>
                   <header>
-                      <h4 class="question"></h4>
+                      <h4 class="question4"></h4>
                   </header>
                </form>
           </div>
@@ -199,33 +199,30 @@ max-height: 60%;
                 type: 'GET',
                 dataType: 'json',
                 success: function (data) {
-                    debugger;
-                    $.each(data.question, function(x, y){
-                        $('#q'+(x+1)).find('.question').text(y.name);
-                        $.each(y.answer, function(x, y){
-                            if(y.type == 1){
-                                $(this).parent().append('<div class="option_alternatives">\
-                                    <input type="radio" name="group1" value='+ y.id +' class='+ y.is_correct+'>+"y.name"+<br>\
-                                    <input type="radio" name="group1" value='+ y.id +' class='+ y.is_correct+'>+"y.name"+<br>\
-                                    <input type="radio" name="group1" value='+ y.id +' class='+ y.is_correct+'>+"y.name"+\
-                                </div>\
-                                <div class="row-fluid span8">\
-                                    <a href="#" class="btn btn-inverse comprobar">Conprobar</a>\
-                                    <a href="#" class="btn btn-inverse siguiente">Siguiente</a>\
-                                </div>');
+
+                    $.each(data.question, function(a, b){
+                        $('#q'+(a+1)).find('.question'+(a+1)).text(b.name);
+                        localStorage.setItem('type', b.type);
+                        localStorage.setItem('ind',(a+1));
+                        $.each(b.answer, function(x, y){
+                            if(localStorage.getItem('type') == "1"){
+                                $('.question'+localStorage.getItem('ind')).append("<div class='option_alternatives'>\
+                                    <input type='radio' name='group1' value="+ y.id +" class='+ y.is_correct+'>"+y.name+"<br>\
+                                    </div");
                             }
                             else{
-                                $(this).parent().append('<div class="option_alternatives">\
+                                $('.question'+localStorage.getItem('ind')).append('<div class="option_alternatives">\
                                     <input type="radio" name="group1" value='+ y.id +' class='+ y.is_correct+'>+"y.name"+<br>\
-                                    <input type="radio" name="group1" value='+ y.id +' class='+ y.is_correct+'>+"y.name"+<br>\
-                                    <input type="radio" name="group1" value='+ y.id +' class='+ y.is_correct+'>+"y.name"+\
-                                </div>\
-                                <div class="row-fluid span8">\
-                                    <a href="#" class="btn btn-inverse comprobar">Conprobar</a>\
-                                    <a href="#" class="btn btn-inverse siguiente">Siguiente</a>\
-                                </div>');
+                                        </div>');
                             }
                         });
+{#                        $('.question'+localStorage.getItem('ind')).append('#}
+{#                        <div class="row-fluid span8">\#}
+{#                                    <a href="#" class="btn btn-inverse comprobar">Conprobar</a>\#}
+{#                                    <a href="#" class="btn btn-inverse siguiente">Siguiente</a>\#}
+{#                                </div>#}
+
+
                     });
                 }
             });
