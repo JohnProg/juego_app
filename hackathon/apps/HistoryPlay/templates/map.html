@@ -349,7 +349,6 @@ margin-top: 1.2em;
     }
     function get_info_place (event){
         event.preventDefault();
-        debugger;
         var category = $('#select_category').val();
         var url = '/json/history-place/'+category+'/';
         $.ajax({
