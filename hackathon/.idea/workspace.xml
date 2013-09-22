@@ -6,9 +6,9 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/home.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379791655744" ignored="false" />
     <file path="/settings.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379799740785" ignored="false" />
-    <file path="/website.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379818165074" ignored="false" />
+    <file path="/website.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379822878978" ignored="false" />
     <file path="/urls.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379791544936" ignored="false" />
-    <file path="/home.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379821518099" ignored="false" />
+    <file path="/home.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379823056088" ignored="false" />
     <file path="/Category.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379793967052" ignored="false" />
     <file path="/Question.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379794004578" ignored="false" />
     <file path="/Answer.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379806462024" ignored="false" />
@@ -20,9 +20,10 @@
     <file path="/Profile.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379803630629" ignored="false" />
     <file path="/__init__.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379803880216" ignored="false" />
     <file path="/insert_helper.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379815243030" ignored="false" />
-    <file path="/signup.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379821832513" ignored="false" />
-    <file path="/base.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379821881658" ignored="false" />
+    <file path="/signup.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379824216575" ignored="false" />
+    <file path="/base.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379823639186" ignored="false" />
     <file path="$PROJECT_DIR$/apps/HistoryPlay/templates/player/mapa.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379819615055" ignored="false" />
+    <file path="/login.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379824039085" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="43" selection-start="5422" selection-end="5422" vertical-scroll-proportion="-3.2727273">
+            <state line="145" column="35" selection-start="5699" selection-end="5699" vertical-scroll-proportion="-5.490909">
               <folding />
             </state>
           </provider>
@@ -63,16 +64,18 @@
       <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="50" selection-start="1908" selection-end="1908" vertical-scroll-proportion="6.6363635">
-              <folding />
+            <state line="29" column="26" selection-start="1176" selection-end="1176" vertical-scroll-proportion="-4.6363635">
+              <folding>
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="login.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="44" selection-start="711" selection-end="711" vertical-scroll-proportion="-3.2580645">
+            <state line="28" column="9" selection-start="901" selection-end="901" vertical-scroll-proportion="0.68677497">
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -80,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="signup.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/signup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="40" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.5475638">
+            <state line="42" column="9" selection-start="1543" selection-end="1543" vertical-scroll-proportion="-11.967742">
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -94,7 +97,7 @@
       <file leaf-file-name="website.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="28" selection-start="213" selection-end="219" vertical-scroll-proportion="0.0">
+            <state line="10" column="26" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#25#67#0" expanded="true" />
               </folding>
@@ -123,11 +126,11 @@
         <option value="$PROJECT_DIR$/apps/HistoryPlay/management/commands/insert.py" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/views/home.py" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/views/signin.py" />
-        <option value="$PROJECT_DIR$/apps/HistoryPlay/views/login.py" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/urls/website.py" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/home.html" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/base.html" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/views/signup.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/views/login.py" />
       </list>
     </option>
   </component>
@@ -641,15 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="213" selection-end="219" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#25#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/home.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="23" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
@@ -657,32 +651,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="26" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#25#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="50" selection-start="1908" selection-end="1908" vertical-scroll-proportion="6.6363635">
-          <folding />
+        <state line="29" column="26" selection-start="1176" selection-end="1176" vertical-scroll-proportion="-4.6363635">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="43" selection-start="5422" selection-end="5422" vertical-scroll-proportion="-3.2727273">
+        <state line="145" column="35" selection-start="5699" selection-end="5699" vertical-scroll-proportion="-5.490909">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/login.py">
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/signup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="44" selection-start="711" selection-end="711" vertical-scroll-proportion="-3.2580645">
+        <state line="42" column="9" selection-start="1543" selection-end="1543" vertical-scroll-proportion="-11.967742">
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/signup.py">
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="40" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.5475638">
+        <state line="28" column="9" selection-start="901" selection-end="901" vertical-scroll-proportion="0.68677497">
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>

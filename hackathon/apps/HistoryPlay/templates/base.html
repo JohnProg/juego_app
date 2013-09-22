@@ -144,20 +144,19 @@
 
         function login_function (event){
             event.preventDefault();
-            var url = '/mobile/login_buyer/';
+            var url = '/login/';
             $.ajax({
                 url: url,
                 data: {
-                    password: $('#password').val(),
-                    email: $('#username').val()
+                    password: $('#loguser').val(),
+                    email: $('#logpass').val()
                 },
                 type: 'POST',
                 dataType: 'json',
                 success: function (data) {
                     console.log(data.status);
                     if (data.status === 'OK') {
-                        $.mobile.navigate( "#pagina2" );
-                        getInventoryItems();
+                        console.log('aaa');
                     }
                     else{
                         $('.overlay').fadeIn().children().addClass('effect_in_out');

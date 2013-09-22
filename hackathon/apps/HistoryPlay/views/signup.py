@@ -29,14 +29,18 @@ class SignUp(View):
                 response['status'] = 'ERROR'
                 response['message'] = 'correo ya existe'
                 return HttpResponse(json.dumps(response))
+        except ObjectDoesNotExist:
+            pass
+
+        try:
             user = User.objects.get(username=username)
             if user:
                 response['status'] = 'ERROR'
                 response['message'] = 'username ya existe'
                 return HttpResponse(json.dumps(response))
-        except ObjectDoesNotExist:
+        except:
             pass
-        password = make_password(password)
+        #password = make_password(password)
         user = User.objects.create_user(username, email, password)
         self.login_and_authenticate(user)
 
