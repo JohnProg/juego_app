@@ -7,12 +7,21 @@
 .navbar-inner {
     border-radius: 0 !important;
 }
+.navbar.navbar-inverse {
+    background: #34495e !important;
+}
 #section1 {
     height: 50em;
     width: 100%;
 }
 #myCarousel {
     height: 100%;
+}
+.navbar-inner {
+    background: #34495e !important;
+}
+.nav-collapse.collapse {
+    width: 100%; background: #34495e !important; height: 3.2em;
 }
 .item {
     height: 100%;
@@ -70,8 +79,9 @@ padding-bottom: 5em;
 }
 .span12 {
     width: 100%;
-    margin: 0;
-    margin-top: 3%;
+margin: 0 auto;
+margin-top: 3%;
+text-align: center;
 }
 .section > article {
     overflow: hidden;

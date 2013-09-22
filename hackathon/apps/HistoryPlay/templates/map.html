@@ -131,15 +131,49 @@ aside {
     </div>
     <div id='map'></div>
     <aside>
-        <div>
-
-        </div>
+        <section class="panel_fiends">
+            <header>
+                <h4>Tablero de Posiciones</h4>
+            </header>
+            <article>
+                <ul class="info_fiends">
+                    <li>
+                        <ul class="info_friend">
+                            <li>
+                                <figure>
+                                    <img src="" alt="" class="image_friend"/>
+                                    <figcaption></figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <span class="name_friend">John Paul</span>
+                            </li>
+                            <li>
+                                <span class="image_score"></span>
+                                <span class="score">100</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#" class="facebook_image">Encuentra amigos en facebook</a>
+                    </li>
+                    <li>
+                        <a href="#" class="correo_image">Invitar amigos por correo</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="panel_me">
+            
+        </section>
     </aside>
     <footer class="bar_options">
         <nav>
             <ul>
                 <li>
-                    <select name="" id="select_type_search">
+                    <select name="" id="select_category">
                         <option value="">Chooce Option</option>
                         <option value="">Museos</option>
                         <option value="">Arqueologico</option>
@@ -150,7 +184,7 @@ aside {
                     <a href="" class="btn btn-inverse"><i class="icon-white icon-user"></i>Play</a>
                 </li>
                 <li>
-                    <a href="#myModal1" role="button" data-toggle="modal" class="btn btn-inverse"><i class="icon-white icon-user"></i>See Place</a>
+                    <a href="#myModal1" role="button" data-toggle="modal" id='see_only_place' class="btn btn-inverse"><i class="icon-white icon-user"></i>See Place</a>
                 </li>
                 <li>
                     <a href="#myModal2" role="button" data-toggle="modal" class="btn btn-inverse"><i class="icon-white icon-user"></i>Info</a>
@@ -161,29 +195,57 @@ aside {
 {% endblock content %}
 {% block scripts_bottom %}
     <script type="text/javascript">
-    $(function () {
-        $('#myTab a').click(function (e) {
-          e.preventDefault();
-          $(this).tab('show');
+    $(document).on('ready', init);
+    function init(){
+        drawMap();
+        $('#myTab a').on('click', showtab(event, $(this)));
+        $('#see_only_place').on('click', only_place_function);
+    }
+    function showtab(event, $this){
+        e.preventDefault();
+        $this.tab('show');
+    }
+    function only_place_function (event){
+        event.preventDefault();
+        var id = 123;
+        var category = $('#select_category').val();
+        var url = '/mobile/login_buyer/';
+        $.ajax({
+            url: url,
+            data: {
+                id: id,
+                category: category
+            },
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                var panorama;
+                map_place = GMaps.createPanorama({
+                    el: '#map_place',
+                    lat : data.lat,
+                    lng : data.lng
+                });
+            }
         });
-    });
+    }
+    function get_info_place (event){
+        event.preventDefault();
+        var option = $().val();
+        var url = '/mobile/login_buyer/';
+        $.ajax({
+            url: url,
+            data: {
+                category: category
+            },
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
 
-    map_place = new GMaps({
-        el: '#map_place',
-        lat: -12.043333,
-        lng: -77.028333
-      });
-      map_place.drawRoute({
-        origin: [-12.044012922866312, -77.02470665341184],
-        destination: [-12.090814532191756, -77.02271108990476],
-        travelMode: 'driving',
-        strokeColor: '#131540',
-        strokeOpacity: 0.6,
-        strokeWeight: 6
-      });
-
-
-    map = new GMaps({
+            }
+        });
+    }
+    function drawMap(){
+        map = new GMaps({
         el: '#map',
         lat: -12.043333,
         lng: -77.028333
@@ -196,5 +258,6 @@ aside {
         strokeOpacity: 0.6,
         strokeWeight: 6
       });
+    }
     </script>
 {% endblock scripts_bottom %}
