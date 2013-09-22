@@ -81,3 +81,11 @@ padding-bottom: 5em;
 #myModal2 .btn.btn-inverse {
     width: 50%;
 }
+.overlay{
+    background: rgba(83, 71, 22, 0.14) url(../../img/01.png) repeat;
+    width: 100%;
+    height: 50em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load common_tags %}
+
+{% block scripts_top %}
+    {{ block.super }}
+    <style type="text/css">
+    #myModal2 > div > h1{
+        font-size: 30px;
+       text-align: center;
+    text-transform: uppercase;
+    }
+    .myModal2_p {
+    width: 80%;
+    margin: 0 auto;
+        font-size: 17px;
+        padding-bottom: 1em;
+    }
+ #map,#map_place {
+    margin: 0 auto;width: 100%;
+    height: 100% !important;
+    position: absolute !important;
+}
+.bar_options {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+.bar_options ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0 2% 0 2%;
+}
+.bar_options ul li {
+    display: inline-block;
+    margin: 0 1% 0 1%;
+}
+aside {
+    width: 28%;
+    height: 80%;
+    background: rgba(71, 70, 70, 0.27);
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    color: white;
+    border-radius: 4px;
+}
+#distance {
+    height: 20em;
+}
+#map_place {
+    height: 75% !important;
+    left: 0;
+    width: 90% !important;
+    position: relative !important;
+    padding: 0em;
+    border-radius: 5px;
+    border: 3px solid #34495e;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#distance h3 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+    </style>
+{% endblock scripts_top %}
+
+{% block header %}
+{% endblock header%}
+
+{% block content %}
+    <!-- Modal -->
+    <div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="img_info_place"></div>
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="active"><a href="#home">About Place</a></li>
+          <li><a href="#distance">Route</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">
+              <ul>
+                  <li class="name_place">Place Name</li>
+                  <li>
+                      <span class="inf_1">aaaa</span>
+                  </li>
+                  <li>
+                      <span class="inf_1">aaaa</span>
+                  </li>
+                  <li>
+                      <span class="inf_1">aa</span>
+                  </li>
+                  <li>
+                      <span class="inf_1">aaa</span>
+                  </li>
+                  <li>
+                      <span class="inf_1">aaaa</span>
+                  </li>
+              </ul>
+          </div>
+          <div class="tab-pane" id="distance">
+              <header>
+                  <h3>How Can I Go?</h3>
+              </header>
+              <div id="map_place"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h1>Rules Of The Game</h1>
+      </div>
+      <div class="modal-body">
+        <p class="myModal2_p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, inventore, iusto? Consequatur cum cumque ducimus eius error esse fuga, ipsum nihil, quae quibusdam repudiandae sed sunt, totam veniam voluptatem! Odio?
+        </p>
+      </div>
+    </div>
+    <div id='map'></div>
+    <aside>
+        <div>
+
+        </div>
+    </aside>
+    <footer class="bar_options">
+        <nav>
+            <ul>
+                <li>
+                    <select name="" id="select_type_search">
+                        <option value="">Chooce Option</option>
+                        <option value="">Museos</option>
+                        <option value="">Arqueologico</option>
+                        <option value="">Monumentos</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="" class="btn btn-inverse"><i class="icon-white icon-user"></i>Play</a>
+                </li>
+                <li>
+                    <a href="#myModal1" role="button" data-toggle="modal" class="btn btn-inverse"><i class="icon-white icon-user"></i>See Place</a>
+                </li>
+                <li>
+                    <a href="#myModal2" role="button" data-toggle="modal" class="btn btn-inverse"><i class="icon-white icon-user"></i>Info</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+{% endblock content %}
+{% block scripts_bottom %}
+    <script type="text/javascript">
+    $(function () {
+        $('#myTab a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        });
+    });
+
+    map_place = new GMaps({
+        el: '#map_place',
+        lat: -12.043333,
+        lng: -77.028333
+      });
+      map_place.drawRoute({
+        origin: [-12.044012922866312, -77.02470665341184],
+        destination: [-12.090814532191756, -77.02271108990476],
+        travelMode: 'driving',
+        strokeColor: '#131540',
+        strokeOpacity: 0.6,
+        strokeWeight: 6
+      });
+
+
+    map = new GMaps({
+        el: '#map',
+        lat: -12.043333,
+        lng: -77.028333
+      });
+      map.drawRoute({
+        origin: [-12.044012922866312, -77.02470665341184],
+        destination: [-12.090814532191756, -77.02271108990476],
+        travelMode: 'driving',
+        strokeColor: '#131540',
+        strokeOpacity: 0.6,
+        strokeWeight: 6
+      });
+    </script>
+{% endblock scripts_bottom %}
