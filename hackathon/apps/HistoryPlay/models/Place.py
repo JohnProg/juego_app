@@ -76,4 +76,4 @@ class Place(models.Model):
         return self.name
 
     class Meta:
-        app_label='hp'
+        app_label='HistoryPlay'

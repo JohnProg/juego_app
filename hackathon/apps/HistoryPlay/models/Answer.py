@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -30,7 +32,7 @@ class Answer(models.Model):
     )
 
     def __unicode__(self):
-        return self.street[:30]
+        return self.name
 
     class Meta:
-        app_label='hp'
+        app_label='HistoryPlay'

@@ -11,5 +11,5 @@ __all__ = [
     'HistoryPlay',
     'Place',
     'Profile',
-    'Question',
+    'Question'
 ]

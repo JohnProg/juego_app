@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -26,9 +28,7 @@ class HistoryPlay(models.Model):
         related_name='history_play_set'
     )
     progress = models.IntegerField(
-        verbose_name=_(u'progreso'),
-        max_value = 100,
-        min_value = 0
+        verbose_name=_(u'progreso')
     )
     status = models.IntegerField(
         choices=STATUS_CHOICES,
@@ -46,7 +46,7 @@ class HistoryPlay(models.Model):
     )
 
     def __unicode__(self):
-        return self.street[:30]
+        return self.name
 
     class Meta:
-        app_label='hp'
+        app_label='HistoryPlay'
