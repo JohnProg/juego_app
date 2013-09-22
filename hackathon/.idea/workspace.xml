@@ -36,11 +36,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="map.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="map.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/map.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="12" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.6467818">
+            <state line="55" column="12" selection-start="1029" selection-end="1029" vertical-scroll-proportion="-17.166666">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style_web.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/bootstrap/css/style_web.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="4" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="19" selection-start="3607" selection-end="3607" vertical-scroll-proportion="1.2119309">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="10" selection-start="2080" selection-end="2080" vertical-scroll-proportion="-33.125">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,11 +100,11 @@
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/templatetags/map.html" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/views/home.py" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/urls/website.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/player/mapa.html" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/map.html" />
         <option value="$PROJECT_DIR$/static/bootstrap/css/style_web.css" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/home.html" />
-        <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/player/mapa.html" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/base.html" />
-        <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/map.html" />
       </list>
     </option>
   </component>
@@ -290,6 +320,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -828,13 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="50" selection-start="1436" selection-end="1436" vertical-scroll-proportion="0.7535322">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/home.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.13353115">
@@ -860,24 +923,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/bootstrap/css/style_web.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="9" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.7106825">
+        <state line="33" column="4" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="89" selection-start="3248" selection-end="3313" vertical-scroll-proportion="0.34065935">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="12" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.6467818">
+        <state line="55" column="12" selection-start="1029" selection-end="1029" vertical-scroll-proportion="-17.166666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="10" selection-start="2080" selection-end="2080" vertical-scroll-proportion="-33.125">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="19" selection-start="3607" selection-end="3607" vertical-scroll-proportion="1.2119309">
           <folding />
         </state>
       </provider>
