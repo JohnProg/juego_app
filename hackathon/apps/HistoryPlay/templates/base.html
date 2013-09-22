@@ -107,9 +107,11 @@
       <div class="modal-body">
           <form action="" id="signin_form">
               <label for="">Username</label>
-              <input type="text" placeholder="Username"/>
+              <input type="text" placeholder="Username" id="username" />
+              <label for="">Email</label>
+              <input type="text" placeholder="Email" id="email" />
               <label for="">Password</label>
-              <input type="password"/>
+              <input type="password" id="password" />
               <input type="submit" value="Sign In" class="btn btn-inverse"/>
           </form>
       </div>
@@ -130,7 +132,7 @@
         function init(){
 
             $('#login_form').on('submit', login_function);
-            $('#signin_form').on('submit', login_function);
+            $('#signin_form').on('submit', signin_function);
             $("#log_in").live("click", login_function);
             $(".menu_nav_scroll .menu").on("click",function(){
 
@@ -162,6 +164,29 @@
             });
         }
 
+
+        function signin_function (event){
+            event.preventDefault();
+            var url = '/sign_up/';
+            $.ajax({
+                url: url,
+                data: {
+                    password: $('#password').val(),
+                    username: $('#username').val(),
+                    email: $('#email').val()
+                },
+                type: 'POST',
+                dataType: 'json',
+                success: function (data) {
+                    if (data.status === 'OK') {
+
+                    }
+                    else{
+                        $('.overlay').fadeIn().children().addClass('effect_in_out');
+                    }
+                }
+            });
+        }
 
         function login_function (event){
             event.preventDefault();
