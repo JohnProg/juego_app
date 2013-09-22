@@ -25,7 +25,7 @@ class XlsToJsonParser(object):
             return False
             #TODO verify the xls in more detail
         self.xls_path = self.ROOT_PATH + '/apps/common/db_data/' + self.xls + '.xls'
-        xls_book = xlrd.open_workbook(self.xls_path)
+        xls_book = xlrd.open_workbook(self.xls_path, encoding_override="cp1252")
         xls_sheet = xls_book.sheet_by_name(self.sheet)
         return xls_sheet
 
@@ -108,50 +108,28 @@ class QuestionHelper(XlsToJsonParser):
         self.parse_to_json()
 
 
-class FindQuestionHelper(XlsToJsonParser):
+class AnswerHelper(XlsToJsonParser):
     entity = Place
-    xls = 'BD'
+    xls = 'BD2'
     sheet = 'Hoja1'
 
-    def find_question(self, id_question):
+    def process_xls(self):
         nrows = self.sheet.nrows - 1
         current_row = 1
 
         while(current_row < nrows):
-            id = self.parse_type(self.sheet.cell(current_row,0))
-            if id_question == id:
-                return self.parse_type(self.sheet.cell(current_row,3))
+            try:
+                question_name = self.parse_type(self.sheet.cell(current_row,0))
+                question = Question.objects.get(name=question_name)
+                answer = Answer()
+                answer.question = question
+                answer.name = self.parse_type(self.sheet.cell(current_row,1))
+                answer.is_correct = int(float(self.parse_type(self.sheet.cell(current_row,2))))
+                answer.image = self.parse_type(self.sheet.cell(current_row,3))
+                answer.save()
+            except:
+                pass
             current_row += 1
-
-        return None
 
     def insert(self):
         self.parse_to_json()
-
-# class AnswerHelper(XlsToJsonParser):
-#     entity = Place
-#     xls = 'BD2'
-#     sheet = 'Hoja1'
-#
-#     def process_xls(self):
-#         nrows = self.sheet.nrows - 1
-#         current_row = 1
-#         find = FindQuestionHelper()
-#
-#         while(current_row < nrows):
-#             question = self.parse_type(self.sheet.cell(current_row,0))
-#             question_name = find.find_question(question)
-#
-#             question = Question.objects.get(name=question_name)
-#             answer = Answer()
-#
-#             answer.question = question
-#             image = self.parse_type(self.sheet.cell(current_row,3))
-#             is_correct = self.parse_type(self.sheet.cell(current_row,3))
-#             answer.image = self.parse_type(self.sheet.cell(current_row,3))
-#             answer.is_correct =
-#             answer.save()
-#             current_row += 1
-#
-#     def insert(self):
-#         self.parse_to_json()

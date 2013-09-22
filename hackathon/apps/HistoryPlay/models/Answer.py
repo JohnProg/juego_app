@@ -14,8 +14,12 @@ class Answer(models.Model):
         verbose_name=_(u'Pregunta'),
         related_name='answer_set'
     )
+    name = models.CharField (
+        verbose_name=_(u'name'),
+        max_length=150,
+    )
     image = models.CharField (
-        verbose_name=_(u'respuesta'),
+        verbose_name=_(u'imagen'),
         max_length=150,
     )
     is_correct = models.BooleanField (

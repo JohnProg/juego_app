@@ -44,6 +44,14 @@ class MapRoute(TemplateView, LoginRequiredMixin):
         return context
 
 
+class Question(TemplateView, LoginRequiredMixin):
+    template_name = 'question.html'
+
+    def get_context_data(self, **kwargs):
+        context = {}
+        return context
+
+
 class HistoryPlayJsonView(View, LoginRequiredMixin):
 
     @csrf_exempt
@@ -55,7 +63,7 @@ class HistoryPlayJsonView(View, LoginRequiredMixin):
         profile = Profile.objects.get(user=self.request.user)
         history_plays = HistoryPlay.objects.filter(
             profile=profile,
-            place__status=Place.STATUS_ACTIVE
+            place__status=Place.STATUS_ACTIVE,
         )
         for play in history_plays:
             data.append({

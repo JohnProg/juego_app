@@ -5,7 +5,7 @@ from apps.HistoryPlay.models.Category import Category
 from apps.HistoryPlay.models.Answer import Answer
 from apps.HistoryPlay.models.HistoryPlay import HistoryPlay
 from apps.common.insert_helper import QuestionHelper
-# from apps.common.insert_helper import AnswerHelper
+from apps.common.insert_helper import AnswerHelper
 from apps.HistoryPlay.models.Place import Place
 from apps.HistoryPlay.models.Question import Question
 
@@ -30,14 +30,17 @@ class Command(BaseCommand):
         if entity == 'all':
             self.insert_category()
             self.insert_museos()
-            #self.insert_question()
-            # self.insert_museo()
+            self.insert_question()
+            self.insert_answer()
 
         if entity == 'museo':
             self.insert_museos()
 
         if entity == 'question':
             self.insert_question()
+
+        if entity == 'answer':
+            self.insert_answer()
 
     def insert_category(self):
         if self.data_delete:
@@ -77,14 +80,14 @@ class Command(BaseCommand):
             else:
                 self.stdout.write('can not insert the data: question \n')
 
-    # def insert_answer(self):
-    #     if self.data_delete:
-    #         Answer.objects.all().delete()
-    #         self.stdout.write('delete data: answer. \n')
-    #     else:
-    #         if Answer.objects.filter().count() == 0:
-    #             answer_helper = AnswerHelper()
-    #             answer_helper.insert_information()
-    #             self.stdout.write('Successfully inserted data: answer. \n')
-    #         else:
-    #             self.stdout.write('can not insert the data: answer \n')
+    def insert_answer(self):
+        if self.data_delete:
+            Answer.objects.all().delete()
+            self.stdout.write('delete data: answer. \n')
+        else:
+            if Answer.objects.filter().count() == 0:
+                answer_helper = AnswerHelper()
+                answer_helper.insert_information()
+                self.stdout.write('Successfully inserted data: answer. \n')
+            else:
+                self.stdout.write('can not insert the data: answer \n')
