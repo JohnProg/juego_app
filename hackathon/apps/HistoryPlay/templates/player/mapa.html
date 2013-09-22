@@ -2,17 +2,40 @@
 {% load i18n %}
 {% load common_tags %}
 
-{% block header %}
+{% block scripts_top %}
     {{ block.super }}
+    <style type="text/css">
+
+    </style>
+{% endblock scripts_top %}
+
+{% block header %}
+ghjjgj
 {% endblock header%}
 
 {% block content %}
+
     <div id='map'></div>
-    <section>
-        <ul>
-            <li><a href=""><i class="icon-white icon-user"></i>Play</a></li>
-        </ul>
-    </section>
+    <aside>
+        <div>
+
+        </div>
+    </aside>
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <a href="" class="btn btn-inverse"><i class="icon-white icon-user"></i>Play</a>
+                </li>
+                <li>
+                    <a href="" class="btn btn-inverse"><i class="icon-white icon-user"></i>See Place</a>
+                </li>
+                <li>
+                    <a href="" class="btn btn-inverse"><i class="icon-white icon-user"></i>Info</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
 {% endblock content %}
 {% block scripts_bottom %}
     <script type="text/javascript">

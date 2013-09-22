@@ -10,7 +10,7 @@
         <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active left">
-          <img src="http://getbootstrap.com/2.3.2/assets/img/examples/slide-01.jpg" alt="">
+          <img src="{{ STATIC_URL }}img/image1.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Example headline.</h1>
@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="item next left">
-          <img src="http://getbootstrap.com/2.3.2/assets/img/examples/slide-01.jpg" alt="">
+          <img src="{{ STATIC_URL }}img/image2.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="http://getbootstrap.com/2.3.2/assets/img/examples/slide-01.jpg" alt="">
+          <img src="{{ STATIC_URL }}img/image1.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>One more for good measure.</h1>
@@ -42,6 +42,7 @@
       </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+        <div class="overlay"></div>
     </div>
     </section>
     <section id="section2" class="section">
