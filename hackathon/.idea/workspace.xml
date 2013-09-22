@@ -4,6 +4,7 @@
     <list default="true" id="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" name="Default" comment="" />
     <ignored path="hackathon.iws" />
     <ignored path=".idea/workspace.xml" />
+<<<<<<< HEAD
     <file path="$PROJECT_DIR$/../../../app_mobile/proyecto_royal_mobile/index.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379792326204" ignored="false" />
     <file path="/index.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379792325780" ignored="false" />
     <file path="$PROJECT_DIR$/../../../app_mobile/proyecto_royal_mobile/js/main_mobile.js" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379791836368" ignored="false" />
@@ -17,6 +18,30 @@
     <file path="/style_web.css" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379829665606" ignored="false" />
     <file path="/website.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379809535045" ignored="false" />
     <file path="/map.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379832848388" ignored="false" />
+=======
+    <file path="/home.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379833042939" ignored="false" />
+    <file path="/settings.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379829359202" ignored="false" />
+    <file path="/website.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379829861106" ignored="false" />
+    <file path="/urls.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379791544936" ignored="false" />
+    <file path="/home.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379823056088" ignored="false" />
+    <file path="/Category.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379793967052" ignored="false" />
+    <file path="/Question.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379794004578" ignored="false" />
+    <file path="/Answer.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379806462024" ignored="false" />
+    <file path="/a.dummy" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379808695306" ignored="false" />
+    <file path="/requirements.txt" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379797898514" ignored="false" />
+    <file path="/insert.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379808486261" ignored="false" />
+    <file path="/HistoryPlay.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379804997970" ignored="false" />
+    <file path="/Place.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379826675596" ignored="false" />
+    <file path="/Profile.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379826483599" ignored="false" />
+    <file path="/__init__.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379803880216" ignored="false" />
+    <file path="/insert_helper.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379827396677" ignored="false" />
+    <file path="/signup.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379830837145" ignored="false" />
+    <file path="/base.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379823639186" ignored="false" />
+    <file path="$PROJECT_DIR$/apps/HistoryPlay/templates/player/mapa.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379819615055" ignored="false" />
+    <file path="/login.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379831692021" ignored="false" />
+    <file path="/map.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379825472586" ignored="false" />
+    <file path="/.gitignore" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379829342246" ignored="false" />
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +65,7 @@
     <favorites_list name="hackathon" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf>
       <file leaf-file-name="map.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/map.html">
@@ -87,6 +113,157 @@
         </entry>
       </file>
     </leaf>
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="website.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="19" column="25" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#25#67#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="login.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/login.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="13" column="72" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#24#35#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="home.py" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/home.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="40" column="27" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.8041775">
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Profile.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/Profile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="14" column="23" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#25#53#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="view.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/common/view.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="251" column="39" selection-start="8846" selection-end="8846" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="signup.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/signup.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="70" column="36" selection-start="2506" selection-end="2506" vertical-scroll-proportion="-11.193548">
+                  <folding>
+                    <element signature="e#24#35#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Place.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/Place.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="66" column="5" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#0#28#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="insert.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/management/commands/insert.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="29" column="32" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#0#51#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="map.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/map.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="236" column="19" selection-start="7360" selection-end="7360" vertical-scroll-proportion="-6.0833335">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="HistoryPlay.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/HistoryPlay.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#25#53#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="HistoryPlay.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/HistoryPlay.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="42" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#25#53#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Place.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/Place.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="11" column="5" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#0#28#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Profile.py" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/Profile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="11" selection-start="283" selection-end="290" vertical-scroll-proportion="0.38961038">
+                  <folding>
+                    <element signature="e#25#53#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -104,6 +281,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/hackathon/static/index.html" />
         <option value="$USER_HOME$/Workspace/royalpioneers/apps/rp/templates/website/base.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
@@ -117,6 +295,24 @@
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/base.html" />
         <option value="$PROJECT_DIR$/static/bootstrap/css/style_web.css" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/map.html" />
+=======
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/management/commands/insert.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/views/signin.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/home.html" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/base.html" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/map.html" />
+        <option value="$PROJECT_DIR$/apps/common/view.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/models/Place.py" />
+        <option value="$PROJECT_DIR$/apps/common/insert_helper.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/hackathon/settings.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/urls/website.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/models/Profile.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/views/signup.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/views/login.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/models/HistoryPlay.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/views/home.py" />
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
       </list>
     </option>
   </component>
@@ -462,6 +658,8 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+<<<<<<< HEAD
+=======
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -484,6 +682,125 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="urls" />
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HistoryPlay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="urls" />
+=======
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HistoryPlay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HistoryPlay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HistoryPlay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="management" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HistoryPlay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="management" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commands" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -759,6 +1076,7 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Workspace/royalpioneers/royal/static/proyecto_royal_mobile/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -769,10 +1087,25 @@
     <entry file="file://$PROJECT_DIR$/.idea/hackathon.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/Category.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="323" selection-end="323" vertical-scroll-proportion="0.38311687">
+          <folding>
+            <element signature="e#24#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="38" selection-start="1035" selection-end="1035" vertical-scroll-proportion="-2.3882353">
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.17804155">
@@ -783,24 +1116,51 @@
     <entry file="file://$USER_HOME$/Workspace/royalpioneers/apps/rp/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/apps/common/insert_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="77" selection-start="2444" selection-end="2444" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#25#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="12" selection-start="5712" selection-end="5732" vertical-scroll-proportion="2.9522545">
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Workspace/royalpioneers/apps/rp/templates/website/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="331" column="37" selection-start="15786" selection-end="15787" vertical-scroll-proportion="0.32967034">
+=======
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="11" selection-start="53" selection-end="53" vertical-scroll-proportion="0.1369863">
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/home.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.13353115">
+=======
+    <entry file="file://$PROJECT_DIR$/hackathon/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="28" selection-start="478" selection-end="478" vertical-scroll-proportion="0.5647059">
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="263" selection-end="263" vertical-scroll-proportion="0.24480712">
@@ -827,19 +1187,57 @@
     <entry file="file://$PROJECT_DIR$/hackathon/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="25" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="236" column="19" selection-start="7360" selection-end="7360" vertical-scroll-proportion="-6.0833335">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/management/commands/insert.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="32" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/signup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="36" selection-start="2506" selection-end="2506" vertical-scroll-proportion="-11.193548">
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/common/view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="251" column="39" selection-start="8846" selection-end="8846" vertical-scroll-proportion="0.0">
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="72" column="17" selection-start="3582" selection-end="3582" vertical-scroll-proportion="0.7369231">
           <folding />
+=======
+        <state line="19" column="25" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#25#67#0" expanded="true" />
+          </folding>
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/login.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="32" column="29" selection-start="1037" selection-end="1044" vertical-scroll-proportion="0.6008902">
           <folding />
         </state>
@@ -861,10 +1259,34 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+=======
+        <state line="13" column="72" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/HistoryPlay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#25#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/Place.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="5" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/static/bootstrap/css/style_web.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="112" column="1" selection-start="1955" selection-end="1955" vertical-scroll-proportion="0.0">
@@ -884,6 +1306,22 @@
             <element signature="e#7586#8201#0" expanded="false" />
             <element signature="e#8237#8580#0" expanded="false" />
             <element signature="e#8603#8985#0" expanded="false" />
+=======
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/Profile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="23" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#25#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="27" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.8041775">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+>>>>>>> b5bb74a3f81a66b5bcfcd5874380e9b44749fdc1
           </folding>
         </state>
       </provider>

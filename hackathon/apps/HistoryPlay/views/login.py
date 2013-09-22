@@ -13,12 +13,6 @@ class LoginView(View):
     def dispatch(self, request, *args, **kwargs):
         return super(LoginView, self).dispatch(request, *args, **kwargs)
 
-    def login_and_authenticate(self, user):
-        user = auth.authenticate(
-            username=user.username, password=user.password)
-        if user is not None and user.is_active:
-            auth.login(self.request, user)
-
     def post(self, request, *args, **kwargs):
         response = {}
         email = request.POST.get('email')
@@ -28,7 +22,7 @@ class LoginView(View):
             password=password
         )
         if user is not None:
-            self.login_and_authenticate(user)
+            auth.login(self.request, user)
             response['status'] = 'OK'
             response['message'] = 'Login successfully'
         else:

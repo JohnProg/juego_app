@@ -13,10 +13,6 @@ class HistoryPlay(models.Model):
         (STATUS_INCOMPLETE, _('Incompleto')),
     )
 
-    name = models.CharField(
-        verbose_name=_(u'Pregunta'),
-        max_length=150,
-    )
     place = models.ForeignKey (
         'Place',
         verbose_name=_(u'lugar'),
@@ -45,8 +41,6 @@ class HistoryPlay(models.Model):
         editable=False
     )
 
-    def __unicode__(self):
-        return self.name
 
     class Meta:
         app_label='HistoryPlay'
