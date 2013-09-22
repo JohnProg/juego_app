@@ -239,7 +239,7 @@ margin-top: 1.2em;
                            <span class="close_options">x</span>
                     </header>
                     <div class="progress progress-striped active">
-                      <div class="bar bar_updated" style="width: 40%;"></div>
+                      <div class="bar bar_updated"></div>
                         <span class="min_range">0%</span>
                         <span class="max_range">100%</span>
                     </div>
@@ -380,8 +380,9 @@ margin-top: 1.2em;
                             }
                         });
                     }
-
                 });
+                $('.bar_updated').css('width',data.places.progress);
+                console.log(data.places.progress);
             }
         });
     }
