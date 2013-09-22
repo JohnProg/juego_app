@@ -120,6 +120,26 @@ max-height: 60%;
     width: 80%;
     margin: 0;
 }
+    section {
+    width: 80%;
+    margin: 5% auto;
+    min-height: 20em;
+    overflow: hidden;
+}
+.tab-content {
+    min-height: 15em;
+}
+.alternativa_1 {
+    margin: 7em;
+}
+    .alternative {
+    margin: 2% 0 3% 3%;
+}
+.row-fluid.span8 {
+    text-align: center;
+}
+.option_alternatives {
+}
     </style>
 {% endblock scripts_top %}
 
@@ -142,6 +162,22 @@ max-height: 60%;
                       <h4 class="question"></h4>
                   </header>
                     <div class="option_alternatives">
+                        <div class="alternative"><input type="radio" name="group1" value="Milk" class="alternativa_1"> Milk</div>
+                        <div class="alternative"><input type="radio" name="group1" value="Butter" class="alternativa_2"> Butter</div>
+                        <div class="alternative"><input type="radio" name="group1" value="Cheese" class="alternativa_3"> Cheese</div>
+                    </div>
+                    <div class="row-fluid span8">
+                        <a href="#" class="btn btn-inverse comprobar">Conprobar</a>
+                        <a href="#" class="btn btn-inverse siguiente">Siguiente</a>
+                    </div>
+               </form>
+          </div>
+          <div class="tab-pane" id="q2">
+               <form>
+                  <header>
+                      <h4 class="question"></h4>
+                  </header>
+                    <div class="option_alternatives">
                         <input type="radio" name="group1" value="Milk" class="alternativa_1"> Milk<br>
                         <input type="radio" name="group1" value="Butter" class="alternativa_2"> Butter<br>
                         <input type="radio" name="group1" value="Cheese" class="alternativa_3"> Cheese
@@ -152,15 +188,63 @@ max-height: 60%;
                     </div>
                </form>
           </div>
-          <div class="tab-pane" id="q2">...</div>
-          <div class="tab-pane" id="q3">...</div>
-          <div class="tab-pane" id="q4">...</div>
+          <div class="tab-pane" id="q3">
+               <form>
+                  <header>
+                      <h4 class="question"></h4>
+                  </header>
+                    <div class="option_alternatives">
+                        <input type="radio" name="group1" value="Milk" class="alternativa_1"> Milk<br>
+                        <input type="radio" name="group1" value="Butter" class="alternativa_2"> Butter<br>
+                        <input type="radio" name="group1" value="Cheese" class="alternativa_3"> Cheese
+                    </div>
+                    <div class="row-fluid span8">
+                        <a href="#" class="btn btn-inverse comprobar">Conprobar</a>
+                        <a href="#" class="btn btn-inverse siguiente">Siguiente</a>
+                    </div>
+               </form>
+          </div>
+          <div class="tab-pane" id="q4">
+               <form>
+                  <header>
+                      <h4 class="question"></h4>
+                  </header>
+                    <div class="option_alternatives">
+                        <input type="radio" name="group1" value="Milk" class="alternativa_1"> Milk<br>
+                        <input type="radio" name="group1" value="Butter" class="alternativa_2"> Butter<br>
+                        <input type="radio" name="group1" value="Cheese" class="alternativa_3"> Cheese
+                    </div>
+                    <div class="row-fluid span8">
+                        <a href="#" class="btn btn-inverse comprobar">Conprobar</a>
+                        <a href="#" class="btn btn-inverse siguiente">Siguiente</a>
+                    </div>
+               </form>
+          </div>
         </div>
 
     </section>
 
 {% endblock content %}
 {% block scripts_bottom %}
+    <script type="text/javascript">
 
+        $(document).on('ready',function(){
+            var url = 'json/question/2';
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    debugger;
+                    /*$.each(data.category, function(x, y){
+                        $('#select_category').append('<option value="y.id">'+ y.name +'</option>');
+                    });*/
+                }
+            });
+            $('#myTab a').click(function (e) {
+              e.preventDefault();
+              $(this).tab('show');
+            });
+        });
     </script>
 {% endblock scripts_bottom %}
