@@ -2,3 +2,4 @@ hackathon.iml
 .idea
 hackathon/.idea
 *.pyc
+settings.py

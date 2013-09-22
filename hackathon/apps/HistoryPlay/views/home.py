@@ -4,6 +4,9 @@ from django.views.generic.base import View
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 from apps.HistoryPlay.models.Category import Category
+from apps.HistoryPlay.models.Profile import Profile
+from apps.HistoryPlay.models.HistoryPlay import HistoryPlay
+from apps.HistoryPlay.models.Place import Place
 from apps.common.view import LoginRequiredMixin
 
 
@@ -36,17 +39,21 @@ class HistoryPlayJsonView(View):
     def dispatch(self, request, *args, **kwargs):
         return super(HistoryPlayJsonView, self).dispatch(request, *args, **kwargs)
 
-    def get_history_play(self):
+    def get_history_place(self, request):
         data = []
-        categories = Category.objects.all()
-        for category in categories:
+        profile = Profile.objects.get(user=self.request.user)
+        history_plays = HistoryPlay.objects.filter(profile=profile)
+        for play in history_plays:
             data.append({
-                'id': category.id,
-                'name': category.name
+                'place':play.place.name,
+                'latitud':play.place.latitud,
+                'longitud':play.place.longitud,
+                'step':play.place.step
             })
         return data
 
     def get(self, request, *args, **kwargs):
         response = {}
-        response['category'] = self.get_categories()
+        response['places'] = self.get_history_place(request)
+        import pdb;pdb.set_trace()
         return HttpResponse(json.dumps(response))

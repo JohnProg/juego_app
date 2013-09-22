@@ -41,8 +41,6 @@ class HistoryPlay(models.Model):
         editable=False
     )
 
-    def __unicode__(self):
-        return self.name
 
     class Meta:
         app_label='HistoryPlay'

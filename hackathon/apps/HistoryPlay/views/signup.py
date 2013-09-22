@@ -55,19 +55,20 @@ class SignUp(View):
 
     def create_profile(self, user):
         profile = Profile()
-        profile.user_id = user.id
+        profile.user = user
         profile.save()
         return profile
 
     def create_default_data(self, profile):
-        place = Place.objects.get(step=1)
-        history_play = HistoryPlay()
-        history_play.place = place
-        history_play.profile = profile
-        history_play.progress = 0
-        history_play.save()
-
-
+        try:
+            place = Place.objects.get(step=1)
+            history_play = HistoryPlay()
+            history_play.place = place
+            history_play.profile = profile
+            history_play.progress = 0
+            history_play.save()
+        except:
+            print('no default data')
 
     def login_and_authenticate(self, user):
         user = auth.authenticate(

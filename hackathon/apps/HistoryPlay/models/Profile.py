@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -13,8 +14,8 @@ class Profile(models.Model):
         verbose_name=_(u'nombre'),
         max_length=150,
     )
-    user_id = models.IntegerField(
-        verbose_name=_(u'usuario'),
+    user = models.ForeignKey(
+        User
     )
 
     def __unicode__(self):
