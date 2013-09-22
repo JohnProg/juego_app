@@ -58,10 +58,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="home.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="home.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/home.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="187" column="12" selection-start="5987" selection-end="5987" vertical-scroll-proportion="0.75841874">
+                <state line="157" column="22" selection-start="4868" selection-end="4884" vertical-scroll-proportion="0.0">
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -80,10 +80,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="website.py" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="website.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="36" column="33" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0">
+                <state line="36" column="26" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.7758621">
                   <folding>
                     <element signature="e#25#67#0" expanded="true" />
                   </folding>
@@ -130,8 +130,8 @@
         <option value="$PROJECT_DIR$/hackathon/settings.py" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/map.html" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/question.html" />
-        <option value="$PROJECT_DIR$/apps/HistoryPlay/urls/website.py" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/views/home.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/urls/website.py" />
       </list>
     </option>
   </component>
@@ -709,15 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="33" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#25#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/HistoryPlay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="19" selection-start="149" selection-end="164" vertical-scroll-proportion="0.0">
@@ -729,9 +720,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/home.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="12" selection-start="5987" selection-end="5987" vertical-scroll-proportion="0.75841874">
+        <state line="157" column="22" selection-start="4868" selection-end="4884" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="26" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.7758621">
+          <folding>
+            <element signature="e#25#67#0" expanded="true" />
           </folding>
         </state>
       </provider>

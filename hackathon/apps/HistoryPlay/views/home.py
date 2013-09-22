@@ -196,18 +196,6 @@ class SaveGameJsonView(LoginRequiredMixin, View):
             })
         return data
 
-    def get_answer(self,question):
-        data = []
-        answers = Answer.objects.filter(question=question)
-        for answer in answers:
-            data.append({
-                'id':answer.id,
-                'name':answer.name,
-                'image':answer.image,
-                'is_correct':answer.is_correct
-            })
-        return data
-
     def get(self, request, *args, **kwargs):
         response = {}
         place = kwargs.get('place')
