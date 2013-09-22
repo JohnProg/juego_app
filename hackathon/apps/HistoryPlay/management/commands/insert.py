@@ -28,7 +28,7 @@ class Command(BaseCommand):
         if entity == 'all':
             self.insert_category()
             self.insert_museos()
-            # self.insert_momnumentos()
+            self.insert_question()
             # self.insert_museo()
 
         if entity == 'museo':
@@ -56,7 +56,19 @@ class Command(BaseCommand):
             if Place.objects.filter(category=category_museo).count() == 0:
                 criterion_category_helper = MuseumHelper()
                 criterion_category_helper.insert_information()
-                self.stdout.write('Successfully inserted data: criterion category. \n')
+                self.stdout.write('Successfully inserted data: museo. \n')
             else:
-                self.stdout.write('can not insert the data: criterion category. \n')
+                self.stdout.write('can not insert the data: museo \n')
+
+    def insert_question(self):
+        if self.data_delete:
+            Question.objects.all(category=category_museo).delete()
+            self.stdout.write('delete data: museo. \n')
+        else:
+            if Place.objects.filter(category=category_museo).count() == 0:
+                criterion_category_helper = MuseumHelper()
+                criterion_category_helper.insert_information()
+                self.stdout.write('Successfully inserted data: museo. \n')
+            else:
+                self.stdout.write('can not insert the data: museo \n')
 
