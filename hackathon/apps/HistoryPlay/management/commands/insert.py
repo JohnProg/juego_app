@@ -4,6 +4,8 @@ from apps.common.insert_helper import MuseumHelper
 from apps.HistoryPlay.models.Category import Category
 from apps.HistoryPlay.models.Answer import Answer
 from apps.HistoryPlay.models.HistoryPlay import HistoryPlay
+from apps.common.insert_helper import QuestionHelper
+# from apps.common.insert_helper import AnswerHelper
 from apps.HistoryPlay.models.Place import Place
 from apps.HistoryPlay.models.Question import Question
 
@@ -28,11 +30,14 @@ class Command(BaseCommand):
         if entity == 'all':
             self.insert_category()
             self.insert_museos()
-            self.insert_question()
+            #self.insert_question()
             # self.insert_museo()
 
         if entity == 'museo':
             self.insert_museos()
+
+        if entity == 'question':
+            self.insert_question()
 
     def insert_category(self):
         if self.data_delete:
@@ -62,13 +67,24 @@ class Command(BaseCommand):
 
     def insert_question(self):
         if self.data_delete:
-            Question.objects.all(category=category_museo).delete()
-            self.stdout.write('delete data: museo. \n')
+            Question.objects.all().delete()
+            self.stdout.write('delete data: question. \n')
         else:
-            if Place.objects.filter(category=category_museo).count() == 0:
-                criterion_category_helper = MuseumHelper()
-                criterion_category_helper.insert_information()
-                self.stdout.write('Successfully inserted data: museo. \n')
+            if Question.objects.filter().count() == 0:
+                question_helper = QuestionHelper()
+                question_helper.insert_information()
+                self.stdout.write('Successfully inserted data: question. \n')
             else:
-                self.stdout.write('can not insert the data: museo \n')
+                self.stdout.write('can not insert the data: question \n')
 
+    # def insert_answer(self):
+    #     if self.data_delete:
+    #         Answer.objects.all().delete()
+    #         self.stdout.write('delete data: answer. \n')
+    #     else:
+    #         if Answer.objects.filter().count() == 0:
+    #             answer_helper = AnswerHelper()
+    #             answer_helper.insert_information()
+    #             self.stdout.write('Successfully inserted data: answer. \n')
+    #         else:
+    #             self.stdout.write('can not insert the data: answer \n')

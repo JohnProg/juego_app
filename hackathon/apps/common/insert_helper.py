@@ -4,7 +4,9 @@ import xlrd, json
 from django.conf import settings
 from decimal import Decimal
 from apps.HistoryPlay.models.Place import Place
+from apps.HistoryPlay.models.Question import Question
 from apps.HistoryPlay.models.Category import Category
+from apps.HistoryPlay.models.Answer import Answer
 
 
 class XlsToJsonParser(object):
@@ -39,6 +41,9 @@ class XlsToJsonParser(object):
         data = data.replace("\xf3", "o")
         data = data.replace("\xe9", "e")
         data = data.replace("\xed", "i")
+        data = data.replace("\\xbf", "¿")
+        data = data.replace("\\xf1", "ñ")
+        data = data.replace("\xe1", "'a")
         return data
 
     def process_xls(self):
@@ -53,7 +58,7 @@ class MuseumHelper(XlsToJsonParser):
 
     def process_xls(self):
         nrows = self.sheet.nrows - 1
-        current_row = 2
+        current_row = 1
 
         while(current_row < nrows):
             place = Place()
@@ -75,3 +80,78 @@ class MuseumHelper(XlsToJsonParser):
 
     def insert(self):
         self.parse_to_json()
+
+
+class QuestionHelper(XlsToJsonParser):
+    entity = Place
+    xls = 'BD'
+    sheet = 'Hoja1'
+
+    def process_xls(self):
+        nrows = self.sheet.nrows - 1
+        current_row = 1
+
+        while(current_row < nrows):
+            museun_name = self.parse_type(self.sheet.cell(current_row,3))
+            museun = Place.objects.get(name=museun_name)
+            question = Question()
+            question.name = self.parse_type(self.sheet.cell(current_row,1))
+            imagen = int(float(self.parse_type(self.sheet.cell(current_row,2))))
+            if imagen == 1:
+                question.image = ''
+            question.type = int(float(self.parse_type(self.sheet.cell(current_row,4))))
+            question.place = museun
+            question.save()
+            current_row += 1
+
+    def insert(self):
+        self.parse_to_json()
+
+
+class FindQuestionHelper(XlsToJsonParser):
+    entity = Place
+    xls = 'BD'
+    sheet = 'Hoja1'
+
+    def find_question(self, id_question):
+        nrows = self.sheet.nrows - 1
+        current_row = 1
+
+        while(current_row < nrows):
+            id = self.parse_type(self.sheet.cell(current_row,0))
+            if id_question == id:
+                return self.parse_type(self.sheet.cell(current_row,3))
+            current_row += 1
+
+        return None
+
+    def insert(self):
+        self.parse_to_json()
+
+# class AnswerHelper(XlsToJsonParser):
+#     entity = Place
+#     xls = 'BD2'
+#     sheet = 'Hoja1'
+#
+#     def process_xls(self):
+#         nrows = self.sheet.nrows - 1
+#         current_row = 1
+#         find = FindQuestionHelper()
+#
+#         while(current_row < nrows):
+#             question = self.parse_type(self.sheet.cell(current_row,0))
+#             question_name = find.find_question(question)
+#
+#             question = Question.objects.get(name=question_name)
+#             answer = Answer()
+#
+#             answer.question = question
+#             image = self.parse_type(self.sheet.cell(current_row,3))
+#             is_correct = self.parse_type(self.sheet.cell(current_row,3))
+#             answer.image = self.parse_type(self.sheet.cell(current_row,3))
+#             answer.is_correct =
+#             answer.save()
+#             current_row += 1
+#
+#     def insert(self):
+#         self.parse_to_json()

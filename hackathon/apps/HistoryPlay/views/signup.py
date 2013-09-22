@@ -47,7 +47,8 @@ class SignUp(View):
 
         profile = self.create_profile(user)
         self.create_default_data(profile)
-        self.login_and_authenticate(user)
+        user = auth.authenticate(username=user.username, password=password)
+        auth.login(self.request, user)
 
         response['status'] = 'OK'
         response['message'] = 'Bienvenido'
@@ -69,9 +70,3 @@ class SignUp(View):
             history_play.save()
         except:
             print('no default data')
-
-    def login_and_authenticate(self, user):
-        user = auth.authenticate(
-            username=user.username, password=user.password)
-        if user is not None and user.is_active:
-            auth.login(self.request, user)
