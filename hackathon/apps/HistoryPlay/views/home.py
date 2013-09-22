@@ -99,7 +99,6 @@ class QuestionJsonView(View, LoginRequiredMixin):
     def get_history_place(self, place_id):
         data = []
         place = Place.objects.get(pk=place_id)
-        import pdb; pdb.set_trace()
         questions = Question.objects.filter(
             place=place
         )
@@ -116,4 +115,26 @@ class QuestionJsonView(View, LoginRequiredMixin):
         response = {}
         place = kwargs.get('place')
         response['question'] = self.get_history_place(place)
+        return HttpResponse(json.dumps(response))
+
+
+class CategoryJsonView(View, LoginRequiredMixin):
+
+    @csrf_exempt
+    def dispatch(self, request, *args, **kwargs):
+        return super(CategoryJsonView, self).dispatch(request, *args, **kwargs)
+
+    def get_category(self):
+        data = []
+        categories = Category.objects.all()
+        for categori in categories:
+            data.append({
+                'id':categori.id,
+                'name':categori.name
+            })
+        return data
+
+    def get(self, request, *args, **kwargs):
+        response = {}
+        response['category'] = self.get_category()
         return HttpResponse(json.dumps(response))
