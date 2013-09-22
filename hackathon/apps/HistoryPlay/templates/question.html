@@ -127,6 +127,37 @@ max-height: 60%;
 {% endblock header%}
 
 {% block content %}
+    <section>
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="active"><a href="#q1">Question 1</a></li>
+          <li><a href="#q2">Question 2</a></li>
+          <li><a href="#q3">Question 3</a></li>
+          <li><a href="#q4">Question 4</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="q1">
+              <form>
+                  <header>
+                      <h4 class="question"></h4>
+                  </header>
+                    <div class="option_alternatives">
+                        <input type="radio" name="group1" value="Milk" class="alternativa_1"> Milk<br>
+                        <input type="radio" name="group1" value="Butter" class="alternativa_2"> Butter<br>
+                        <input type="radio" name="group1" value="Cheese" class="alternativa_3"> Cheese
+                    </div>
+                    <div class="row-fluid span8">
+                        <a href="#" class="btn btn-inverse comprobar">Conprobar</a>
+                        <a href="#" class="btn btn-inverse siguiente">Siguiente</a>
+                    </div>
+               </form>
+          </div>
+          <div class="tab-pane" id="q2">...</div>
+          <div class="tab-pane" id="q3">...</div>
+          <div class="tab-pane" id="q4">...</div>
+        </div>
+
+    </section>
 
 {% endblock content %}
 {% block scripts_bottom %}
