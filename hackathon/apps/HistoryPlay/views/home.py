@@ -10,6 +10,7 @@ from apps.HistoryPlay.models.Answer import Answer
 from apps.HistoryPlay.models.HistoryPlay import HistoryPlay
 from apps.HistoryPlay.models.Place import Place
 from apps.common.view import LoginRequiredMixin
+from django.views.generic import RedirectView
 
 
 class HomeVIe(TemplateView):
@@ -151,4 +152,65 @@ class CategoryJsonView(View, LoginRequiredMixin):
     def get(self, request, *args, **kwargs):
         response = {}
         response['category'] = self.get_category()
+        return HttpResponse(json.dumps(response))
+
+
+class SaveGameJsonView(LoginRequiredMixin, View):
+
+    @csrf_exempt
+    def dispatch(self, request, *args, **kwargs):
+        return super(SaveGameJsonView, self).dispatch(request, *args, **kwargs)
+
+    def save_game(self, place_id, percentaje):
+        try:
+
+            data = []
+            profile = Profile.objects.get(user=self.request.user)
+            place = Place.objects.get(pk=place_id)
+            history_plays = HistoryPlay.objects.get(
+                profile=profile,
+                place=place
+            )
+            if percentaje == 100:
+                history_plays.status = HistoryPlay.STATUS_COMPLETE
+                history_plays.progress = 100
+                step = int(history_plays.place.step)
+                step = step +1
+                place = Place.objects.get(step=step)
+                next_play = HistoryPlay()
+                next_play.profile = profile
+                next_play.place = place
+                next_play.progress = 0
+                next_play.save()
+
+            if history_plays.progress < percentaje:
+                history_plays.progress = percentaje
+            history_plays.save()
+
+            data.append({
+                'response':'OK',
+            })
+        except:
+            data.append({
+                'response':'ERROR',
+            })
+        return data
+
+    def get_answer(self,question):
+        data = []
+        answers = Answer.objects.filter(question=question)
+        for answer in answers:
+            data.append({
+                'id':answer.id,
+                'name':answer.name,
+                'image':answer.image,
+                'is_correct':answer.is_correct
+            })
+        return data
+
+    def get(self, request, *args, **kwargs):
+        response = {}
+        place = kwargs.get('place')
+        percentaje = kwargs.get('percentaje')
+        response['question'] = self.save_game(place,percentaje)
         return HttpResponse(json.dumps(response))

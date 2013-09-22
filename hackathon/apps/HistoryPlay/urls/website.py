@@ -32,4 +32,8 @@ urlpatterns = patterns('',
     url(r'^json/category/$',
         h.CategoryJsonView.as_view(),
         name='json-category'),
+
+    url(r'^save-game/$',
+        h.ModelHasCommercialDelRedirectView.as_view(),
+        name='save-game')
 )
