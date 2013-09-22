@@ -47,6 +47,7 @@ class SignUp(View):
 
         profile = self.create_profile(user)
         self.create_default_data(profile)
+
         user = auth.authenticate(username=user.username, password=password)
         auth.login(self.request, user)
 
