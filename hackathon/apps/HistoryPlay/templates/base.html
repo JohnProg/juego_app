@@ -55,12 +55,18 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-white icon-user"></i><b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li>
-                        <a href="#myModal1" role="button" data-toggle="modal">Log In</a>
-                    </li>
-                      <li>
-                        <a href="#myModal2" role="button" data-toggle="modal">Sign Up</a>
-                    </li>
+                    {% if user.is_authenticated %}
+                        <li>
+                            <a href="#" class="logout">Log Out</a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="#myModal1" role="button" data-toggle="modal">Log In</a>
+                        </li>
+                          <li>
+                            <a href="#myModal2" role="button" data-toggle="modal">Sign Up</a>
+                        </li>
+                    {% endif %}
                   </ul>
                 </li>
               </ul>
@@ -90,6 +96,20 @@
             $("#log_in").live("click", login_function);
             $('.hide_message').on('focus',function(){
                 $('.msm_error').stop('true').fadeOut().text(data.message);
+            });
+            $('.logout').on('click', function(){
+                var url = '/logout/';
+
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.status === 'OK') {
+                            location.href = '/';
+                        }
+                    }
+                });
             });
 
             $(".menu_nav_scroll .menu").on("click",function(){
@@ -121,7 +141,6 @@
             });
         }
 
-
         function signin_function (event){
             event.preventDefault();
             var url = '/sign_up/';
@@ -138,7 +157,7 @@
                     if (data.status === 'OK') {
                         $('.msm_error').stop('true').fadeIn().text(data.message);
                         setTimeout(function(){
-                            //location.reload();
+                           location.href = '/map';
                         },1000);
                     }
                     else{
@@ -164,7 +183,7 @@
                     if (data.status === 'OK') {
                         $('.msm_error').stop('true').fadeIn().text(data.message);
                         setTimeout(function(){
-                            //location.reload();
+                            location.href = '/map';
                         },1000);
                     }
                     else{
