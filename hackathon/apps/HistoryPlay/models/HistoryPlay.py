@@ -13,10 +13,6 @@ class HistoryPlay(models.Model):
         (STATUS_INCOMPLETE, _('Incompleto')),
     )
 
-    name = models.CharField(
-        verbose_name=_(u'Pregunta'),
-        max_length=150,
-    )
     place = models.ForeignKey (
         'Place',
         verbose_name=_(u'lugar'),

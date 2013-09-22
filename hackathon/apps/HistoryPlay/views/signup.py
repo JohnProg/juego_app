@@ -6,6 +6,7 @@ from django.views.generic.base import View
 from django.contrib.auth.hashers import make_password
 from django.http import Http404, HttpResponse
 from apps.HistoryPlay.models.Profile import Profile
+from apps.HistoryPlay.models.Place import Place
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 from apps.HistoryPlay.models.HistoryPlay import HistoryPlay
@@ -42,9 +43,10 @@ class SignUp(View):
                 return HttpResponse(json.dumps(response))
         except:
             pass
-        #password = make_password(password)
         user = User.objects.create_user(username, email, password)
-        self.create_profile(user)
+
+        profile = self.create_profile(user)
+        self.create_default_data(profile)
         self.login_and_authenticate(user)
 
         response['status'] = 'OK'
@@ -55,14 +57,15 @@ class SignUp(View):
         profile = Profile()
         profile.user_id = user.id
         profile.save()
+        return profile
 
-    # def create_default_data(self):
-    #     history_play = HistoryPlay()
-    #     history_play
-    #     history_play
-    #     history_play
-    #     history_play
-    #     history_play.save()
+    def create_default_data(self, profile):
+        place = Place.objects.get(step=1)
+        history_play = HistoryPlay()
+        history_play.place = place
+        history_play.profile = profile
+        history_play.progress = 0
+        history_play.save()
 
 
 
