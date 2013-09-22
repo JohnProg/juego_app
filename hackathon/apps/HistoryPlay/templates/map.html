@@ -189,22 +189,36 @@ margin-top: 1.2em;
         <div class="tab-content">
           <div class="tab-pane active" id="home">
               <ul>
-                  <li class="name_place">Place Name</li>
+                  <li class="name"></li>
                   <li>
-                      <span class="inf_1">aaaa</span>
+                      <span class="area"></span>
                   </li>
                   <li>
-                      <span class="inf_1">aaaa</span>
+                      <span class="category"></span>
                   </li>
                   <li>
-                      <span class="inf_1">aa</span>
+                      <span class="description"></span>
                   </li>
                   <li>
-                      <span class="inf_1">aaa</span>
+                      <span class="address"></span>
                   </li>
                   <li>
-                      <span class="inf_1">aaaa</span>
+                      <span class="district"></span>
                   </li>
+                  <li>
+                      <span class="phone"></span>
+                  </li>
+                  <li>
+                      <span class="web_page"></span>
+                  </li>
+                  <li>
+                      <span class="schedule"></span>
+                  </li>
+                  <li>
+                      <span class="cost"></span>
+                  </li>
+
+
               </ul>
           </div>
           <div class="tab-pane" id="distance">
@@ -342,26 +356,24 @@ margin-top: 1.2em;
     }
     function only_place_function (event){
         event.preventDefault();
-        var url = '/json/categories/';
-        var id = 123;
-        var category = $('#select_category').val();
-        $.ajax({
-            url: url,
-            data: {
-                id: id,
-                category: category
-            },
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-                var panorama;
-                map_place = GMaps.createPanorama({
-                    el: '#map_place',
-                    lat : data.lat,
-                    lng : data.lng
-                });
+        var id_select = $('.seleccionado').text()
+        $.each( localStorage.getItem('places'), function(x, y){
+            debugger
+            if(id_select == y.place){
+                $('.area').text(y.area);
+                $('.category').text(y.category);
+                $('.name').text(y.name);
+                $('.description').text(y.description);
+                $('.address').text(y.address);
+                $('.district').text(y.district);
+                $('.phone').text(y.phone);
+                $('.web_page').text(y.web_page);
+                $('.schedule').text(y.schedule);
+                $('.cost').text(y.cost);
+
             }
-        });
+        })
+
     }
     function get_info_place (event){
         event.preventDefault();
@@ -372,15 +384,13 @@ margin-top: 1.2em;
         else{
            category = $('#select_category').val();
         }
-
         var url = '/json/history-place/'+category+'/';
         $.ajax({
             url: url,
             type: 'GET',
             dataType: 'json',
             success: function (data) {
-                console.log(data);
-                $.each( data.places, function(x, y){
+                $.each( JSON.parse(localStorage.getItem('places')), function(x, y){
                     if(y.progress === 100){
                         map.addMarker({
                           lat: y.latitud,
@@ -388,7 +398,7 @@ margin-top: 1.2em;
                           title: y.place,
                           icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
                           infoWindow: {
-                            content: '<span class=seleccionado>'+y.id+'</span>'+y.place
+                            content:"<span class='seleccionado'>"+y.id+"</span>"+y.place
                         }
                       });
                     }
