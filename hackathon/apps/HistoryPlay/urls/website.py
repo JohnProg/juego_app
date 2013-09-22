@@ -3,6 +3,7 @@
 from django.conf.urls import url, patterns
 from apps.HistoryPlay.views import home as h
 from apps.HistoryPlay.views import signup as s
+from apps.HistoryPlay.views import logout as o
 from apps.HistoryPlay.views import login as l
 
 urlpatterns = patterns('',
@@ -10,6 +11,8 @@ urlpatterns = patterns('',
         name='sign_up'),
     url(r'^login/$',l.LoginView.as_view(),
         name='login'),
+    url(r'^logout/$',o.LogoutView.as_view(),
+        name='logout'),
     url(r'^$', h.HomeVIe.as_view(),
         name='home'),
     url(r'^map/$', h.MapRoute.as_view(),
