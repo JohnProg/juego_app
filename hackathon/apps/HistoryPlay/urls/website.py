@@ -17,7 +17,7 @@ urlpatterns = patterns('',
         name='home'),
     url(r'^map/$', h.MapRoute.as_view(),
         name='map'),
-    url(r'^question/(?P<place>\d+)$', h.Question.as_view(),
+    url(r'^question/(?P<place>\d+)$', h.QuestionView.as_view(),
         name='question'),
 
     #JSON RESPONSE

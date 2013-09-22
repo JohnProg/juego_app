@@ -44,7 +44,7 @@ class MapRoute(TemplateView, LoginRequiredMixin):
         return context
 
 
-class Question(TemplateView, LoginRequiredMixin):
+class QuestionView(TemplateView, LoginRequiredMixin):
     template_name = 'question.html'
 
     def get_context_data(self, **kwargs):
@@ -99,6 +99,7 @@ class QuestionJsonView(View, LoginRequiredMixin):
     def get_history_place(self, place_id):
         data = []
         place = Place.objects.get(pk=place_id)
+        import pdb; pdb.set_trace()
         questions = Question.objects.filter(
             place=place
         )
