@@ -41,8 +41,8 @@ class XlsToJsonParser(object):
         data = data.replace("\xf3", "o")
         data = data.replace("\xe9", "e")
         data = data.replace("\xed", "i")
-        data = data.replace("\\xbf", "¿")
-        data = data.replace("\\xf1", "ñ")
+        data = data.replace("\xbf", "¿")
+        data = data.replace("\xf1", "ñ")
         data = data.replace("\xe1", "'a")
         return data
 
