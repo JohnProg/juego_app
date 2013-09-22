@@ -83,7 +83,7 @@
           <file leaf-file-name="website.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="36" column="26" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.7758621">
+                <state line="15" column="35" selection-start="519" selection-end="519" vertical-scroll-proportion="0.32327586">
                   <folding>
                     <element signature="e#25#67#0" expanded="true" />
                   </folding>
@@ -729,7 +729,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/urls/website.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="26" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.7758621">
+        <state line="15" column="35" selection-start="519" selection-end="519" vertical-scroll-proportion="0.32327586">
           <folding>
             <element signature="e#25#67#0" expanded="true" />
           </folding>
