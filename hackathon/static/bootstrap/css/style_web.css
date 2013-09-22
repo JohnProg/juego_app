@@ -45,8 +45,9 @@ padding-bottom: 5em;
     height: 40em;
 }
 .section img {
-    width: 30%;
-    float: left;
+    width: 26%;
+float: left;
+padding-right: 3em;
 }
 .msm_error {
     display: block;
