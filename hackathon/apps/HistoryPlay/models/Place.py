@@ -65,6 +65,10 @@ class Place(models.Model):
         editable=False,
         null=False,
     )
+    step = models.IntegerField(
+        editable=False,
+        null=True,
+    )
     created = models.DateTimeField(
         auto_now_add=True,
         editable=False

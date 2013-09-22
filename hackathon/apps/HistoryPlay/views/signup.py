@@ -5,8 +5,10 @@ from django.contrib.auth.models import User
 from django.views.generic.base import View
 from django.contrib.auth.hashers import make_password
 from django.http import Http404, HttpResponse
+from apps.HistoryPlay.models.Profile import Profile
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
+from apps.HistoryPlay.models.HistoryPlay import HistoryPlay
 
 
 class SignUp(View):
@@ -42,11 +44,27 @@ class SignUp(View):
             pass
         #password = make_password(password)
         user = User.objects.create_user(username, email, password)
+        self.create_profile(user)
         self.login_and_authenticate(user)
 
         response['status'] = 'OK'
         response['message'] = 'Bienvenido'
         return HttpResponse(json.dumps(response))
+
+    def create_profile(self, user):
+        profile = Profile()
+        profile.user_id = user.id
+        profile.save()
+
+    # def create_default_data(self):
+    #     history_play = HistoryPlay()
+    #     history_play
+    #     history_play
+    #     history_play
+    #     history_play
+    #     history_play.save()
+
+
 
     def login_and_authenticate(self, user):
         user = auth.authenticate(

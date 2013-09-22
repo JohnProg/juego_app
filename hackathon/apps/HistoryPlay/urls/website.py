@@ -14,4 +14,9 @@ urlpatterns = patterns('',
         name='home'),
     url(r'^map/$', h.MapRoute.as_view(),
         name='map'),
+
+    #JSON RESPONSE
+    url(r'^json/history-pllay/$',
+        h.HistoryPlayJsonView.as_view(),
+        name='json-history-play'),
 )

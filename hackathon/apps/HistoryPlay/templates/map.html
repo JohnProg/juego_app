@@ -207,9 +207,9 @@ aside {
     }
     function only_place_function (event){
         event.preventDefault();
+        var url = '/json/categories/';
         var id = 123;
         var category = $('#select_category').val();
-        var url = '/mobile/login_buyer/';
         $.ajax({
             url: url,
             data: {

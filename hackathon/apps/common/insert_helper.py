@@ -69,7 +69,7 @@ class MuseumHelper(XlsToJsonParser):
             place.cost = self.parse_type(self.sheet.cell(current_row,8))
             place.latitud = self.parse_type(self.sheet.cell(current_row, 9))
             place.longitud = self.parse_type(self.sheet.cell(current_row,10))
-
+            place.step = int(float(self.parse_type(self.sheet.cell(current_row,12))))
             place.save()
             current_row += 1
 
