@@ -120,14 +120,28 @@ max-height: 60%;
     width: 80%;
     margin: 0;
 }
-    section {
+    article {
     width: 80%;
+        background: rgba(247, 247, 247, 0.96);
     margin: 5% auto;
     min-height: 20em;
     overflow: hidden;
+        border-radius: 10px;
+box-shadow: 0 1px 5px rgb(138, 120, 120), 1px 2px 5px rgb(223, 220, 220);
 }
 .tab-content {
     min-height: 15em;
+    border: none !important;
+}
+section{
+    margin: 0;
+padding: 0;
+    height: 100%;
+position: absolute;
+width: 100%;
+background: url('http://vilmanunez.com/wp-content/uploads/2013/07/encuestas-642x325.png') no-repeat center center;
+background-size: cover;
+background-attachment: fixed;
 }
 .alternativa_1 {
     margin: 7em;
@@ -148,6 +162,7 @@ max-height: 60%;
 
 {% block content %}
     <section>
+        <article>
         <ul class="nav nav-tabs" id="myTab">
           <li class="active"><a href="#q1">Question 1</a></li>
           <li><a href="#q2">Question 2</a></li>
@@ -185,7 +200,37 @@ max-height: 60%;
                </form>
           </div>
         </div>
-
+            <div class="tab-content">
+              <div class="tab-pane active" id="q1">
+                  <form>
+                      <header>
+                          <h4 class="question"></h4>
+                      </header>
+                   </form>
+              </div>
+              <div class="tab-pane" id="q2">
+                   <form>
+                      <header>
+                          <h4 class="question"></h4>
+                      </header>
+                   </form>
+              </div>
+              <div class="tab-pane" id="q3">
+                   <form>
+                      <header>
+                          <h4 class="question"></h4>
+                      </header>
+                   </form>
+              </div>
+              <div class="tab-pane" id="q4">
+                   <form>
+                      <header>
+                          <h4 class="question"></h4>
+                      </header>
+                   </form>
+              </div>
+            </div>
+        </article>
     </section>
 
 {% endblock content %}
@@ -216,19 +261,39 @@ max-height: 60%;
                                         </div>');
                             }
                         });
-{#                        $('.question'+localStorage.getItem('ind')).append('#}
-{#                        <div class="row-fluid span8">\#}
-{#                                    <a href="#" class="btn btn-inverse comprobar">Conprobar</a>\#}
-{#                                    <a href="#" class="btn btn-inverse siguiente">Siguiente</a>\#}
-{#                                </div>#}
+                        debugger;
 
 
                     });
+                    $('.question4').append('<div class="row-fluid span8">\
+                                          <a href="#" class="btn btn-inverse check">Conprobar</a>\                                          <a href="#" class="btn btn-inverse siguiente">Siguiente</a>\
+                                          </div>');
                 }
             });
             $('#myTab a').click(function (e) {
               e.preventDefault();
               $(this).tab('show');
+            });
+            $('.check').on('click',function(){
+                var a;
+                $.each($('.tab-content'), function(a, b){
+                    if($(".true:checked"))a++;
+                });
+                var tabs = $('.tab-content').find('div').length;
+                a = (a/tabs)*100;
+                var place_url = location.search();
+                $.ajax({
+                    url: url,
+                    data:{
+                        'percentage': a,
+                        'place':place_url
+                    },
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+
+                    }
+                });
             });
         });
     </script>

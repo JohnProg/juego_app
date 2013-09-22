@@ -167,6 +167,30 @@ margin-top: 1.2em;
     .image_score{
         background: url("{{ STATIC_URL }}img/star.png");
     }
+    #home ul {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+#home ul > li {
+    text-align: left;
+}
+#home ul > li label {
+    display: inline-block;
+    padding-left: 1em;
+    margin-right: 5em;
+}
+#home ul > li span {
+    float: right;
+}
+#home .name {
+    margin-bottom: 1em;
+    font-size: 32px;
+    max-width: 16em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
     </style>
 {% endblock scripts_top %}
 
@@ -325,7 +349,10 @@ margin-top: 1.2em;
         select_fill();
         get_info_place(event);
         drawMap();
-        $('#myTab a').on('click', showtab(event, $(this)));
+        $('#myTab a').click(function (e) {
+              e.preventDefault();
+              $(this).tab('show');
+            });
         $('#see_only_place').on('click', only_place_function);
         $('#select_category').on('change', get_info_place);
         $('.see_options').on('click',function(){
@@ -354,10 +381,6 @@ margin-top: 1.2em;
                 });
             }
         });
-    }
-    function showtab(event, $this){
-        event.preventDefault();
-        $this.tab('show');
     }
     function only_place_function (event){
         event.preventDefault();
