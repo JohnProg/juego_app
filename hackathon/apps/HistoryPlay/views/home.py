@@ -27,13 +27,23 @@ class MapRoute(TemplateView, LoginRequiredMixin):
             })
         return data
 
+    def get_profile(self):
+        data = []
+        profile = Profile.objects.get(user=self.request.user)
+        data.append({
+            'name': profile.name,
+            'address': profile.address
+        })
+        return data
+
     def get_context_data(self, **kwargs):
         context = {}
         context['category'] = self.get_categories()
+        context['profile'] = self.get_profile()
         return context
 
 
-class HistoryPlayJsonView(View):
+class HistoryPlayJsonView(View, LoginRequiredMixin):
 
     @csrf_exempt
     def dispatch(self, request, *args, **kwargs):
@@ -55,5 +65,4 @@ class HistoryPlayJsonView(View):
     def get(self, request, *args, **kwargs):
         response = {}
         response['places'] = self.get_history_place(request)
-        import pdb;pdb.set_trace()
         return HttpResponse(json.dumps(response))
