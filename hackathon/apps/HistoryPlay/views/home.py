@@ -44,6 +44,14 @@ class MapRoute(TemplateView, LoginRequiredMixin):
         return context
 
 
+class Question(TemplateView, LoginRequiredMixin):
+    template_name = 'question.html'
+
+    def get_context_data(self, **kwargs):
+        context = {}
+        return context
+
+
 class HistoryPlayJsonView(View, LoginRequiredMixin):
 
     @csrf_exempt
