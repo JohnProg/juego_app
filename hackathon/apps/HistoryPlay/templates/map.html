@@ -189,32 +189,38 @@ margin-top: 1.2em;
         <div class="tab-content">
           <div class="tab-pane active" id="home">
               <ul>
-                  <li class="name"></li>
+                  <h4 class="name">
+                  </h4>
                   <li>
-                      <span class="area"></span>
+                      <label>Area: </label>
+                      <span class="area"> </span>
                   </li>
                   <li>
-                      <span class="category"></span>
-                  </li>
-                  <li>
+                      <label>Descripcion: </label>
                       <span class="description"></span>
                   </li>
                   <li>
+                      <label>Direccion: </label>
                       <span class="address"></span>
                   </li>
                   <li>
-                      <span class="district"></span>
+                      <label>Distrito: </label>
+                      <span class="district"> </span>
                   </li>
                   <li>
+                      <label>Tellefono: </label>
                       <span class="phone"></span>
                   </li>
                   <li>
+                      <label>Pagina web: </label>
                       <span class="web_page"></span>
                   </li>
                   <li>
+                      <label>Horarios: </label>
                       <span class="schedule"></span>
                   </li>
                   <li>
+                      <label>Costo: </label>
                       <span class="cost"></span>
                   </li>
 
@@ -333,9 +339,7 @@ margin-top: 1.2em;
             },500);
         });
         $('.seleccionado').on('click',function(){
-            debugger;
             id = $(this).text();
-            debugger;
         });
     }
     function select_fill(){
@@ -346,7 +350,7 @@ margin-top: 1.2em;
             dataType: 'json',
             success: function (data) {
                 $.each(data.category, function(x, y){
-                    $('#select_category').append('<option value="y.id">'+ y.name +'</option>');
+                    $('#select_category').append('<option value='+y.id+'>'+ y.name +'</option>');
                 });
             }
         });
@@ -358,12 +362,11 @@ margin-top: 1.2em;
     function only_place_function (event){
         event.preventDefault();
         var id_select = $('.seleccionado').text()
-        $.each( localStorage.getItem('places'), function(x, y){
-            debugger
-            if(id_select == y.place){
+        $.each( JSON.parse(localStorage.getItem('places')).places, function(x, y){
+            if(id_select == y.id){
                 $('.area').text(y.area);
                 $('.category').text(y.category);
-                $('.name').text(y.name);
+                $('.name').text(y.place);
                 $('.description').text(y.description);
                 $('.address').text(y.address);
                 $('.district').text(y.district);
@@ -371,7 +374,8 @@ margin-top: 1.2em;
                 $('.web_page').text(y.web_page);
                 $('.schedule').text(y.schedule);
                 $('.cost').text(y.cost);
-
+                debugger;
+                street(y.longitud, y.latitud);
             }
         })
 
@@ -391,7 +395,9 @@ margin-top: 1.2em;
             type: 'GET',
             dataType: 'json',
             success: function (data) {
-                $.each( JSON.parse(localStorage.getItem('places')), function(x, y){
+                localStorage.setItem('places', JSON.stringify(data));
+                $.each( data.places, function(x, y){
+
                     if(y.progress === 100){
                         map.addMarker({
                           lat: y.latitud,
@@ -437,6 +443,14 @@ margin-top: 1.2em;
           alert('Click event');
         }
       });
+    }
+
+    function street(lat, long){
+           map_place = GMaps.createPanorama({
+                    el: '#map_place',
+                    lat : lat,
+                    lng : long
+                });
     }
     </script>
 {% endblock scripts_bottom %}

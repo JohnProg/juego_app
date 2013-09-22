@@ -24,7 +24,7 @@
     <file path="/base.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379823639186" ignored="false" />
     <file path="$PROJECT_DIR$/apps/HistoryPlay/templates/player/mapa.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379819615055" ignored="false" />
     <file path="/login.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379831692021" ignored="false" />
-    <file path="/map.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379859597656" ignored="false" />
+    <file path="/map.html" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379863013151" ignored="false" />
     <file path="/.gitignore" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379829342246" ignored="false" />
     <file path="/logout.py" changelist="623d2bca-737c-40fa-9a66-c832474f317a" time="1379836287151" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,11 +48,25 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="map.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="map.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/map.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="392" column="38" selection-start="11072" selection-end="11072" vertical-scroll-proportion="-6.509091">
-                  <folding />
+                <state line="229" column="30" selection-start="5130" selection-end="5138" vertical-scroll-proportion="0.33278146">
+                  <folding>
+                    <element signature="e#3316#3337#0" expanded="true" />
+                    <element signature="e#5466#5487#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Question.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/Question.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="16" column="30" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#25#53#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -66,10 +80,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="home.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="home.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/home.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="69" column="25" selection-start="2093" selection-end="2093" vertical-scroll-proportion="0.41810346">
+                <state line="65" column="22" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.0">
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -104,8 +118,17 @@
           <file leaf-file-name="map.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/map.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="217" column="39" selection-start="4726" selection-end="4730" vertical-scroll-proportion="0.8634294">
-                  <folding />
+                <state line="364" column="82" selection-start="10358" selection-end="10358" vertical-scroll-proportion="2.0015175">
+                  <folding>
+                    <marker date="1379863017489" expanded="true" signature="3913:4031" placeholder="..." />
+                    <marker date="1379863017489" expanded="true" signature="4054:4185" placeholder="..." />
+                    <marker date="1379863017489" expanded="true" signature="4208:4333" placeholder="..." />
+                    <marker date="1379863017489" expanded="true" signature="4356:4482" placeholder="..." />
+                    <marker date="1379863017489" expanded="true" signature="4505:4628" placeholder="..." />
+                    <marker date="1379863017489" expanded="true" signature="4651:4778" placeholder="..." />
+                    <marker date="1379863017489" expanded="true" signature="4801:4926" placeholder="..." />
+                    <marker date="1379863017489" expanded="true" signature="4949:5067" placeholder="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -136,8 +159,8 @@
         <option value="$PROJECT_DIR$/apps/common/insert_helper.py" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/urls/website.py" />
         <option value="$PROJECT_DIR$/hackathon/settings.py" />
-        <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/map.html" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/views/home.py" />
+        <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/map.html" />
       </list>
     </option>
   </component>
@@ -595,15 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/Question.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="118" selection-end="118" vertical-scroll-proportion="0.12931034">
-          <folding>
-            <element signature="e#25#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/common/insert_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="30" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.6315789">
@@ -695,13 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="392" column="38" selection-start="11072" selection-end="11072" vertical-scroll-proportion="-6.509091">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/common/view.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -709,11 +716,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/models/Question.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="30" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#25#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/views/home.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="25" selection-start="2093" selection-end="2093" vertical-scroll-proportion="0.41810346">
+        <state line="65" column="22" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="229" column="30" selection-start="5130" selection-end="5138" vertical-scroll-proportion="0.33278146">
+          <folding>
+            <element signature="e#3316#3337#0" expanded="true" />
+            <element signature="e#5466#5487#0" expanded="true" />
           </folding>
         </state>
       </provider>
