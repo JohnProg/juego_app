@@ -22,4 +22,8 @@ urlpatterns = patterns('',
     url(r'^json/history-place/(?P<category>\d+)/$',
         h.HistoryPlayJsonView.as_view(),
         name='json-history-play'),
+
+    url(r'^json/question/(?P<place>\d+)/$',
+        h.QuestionJsonView.as_view(),
+        name='json-question-place'),
 )

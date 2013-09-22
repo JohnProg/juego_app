@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 from apps.HistoryPlay.models.Category import Category
 from apps.HistoryPlay.models.Profile import Profile
+from apps.HistoryPlay.models.Question import Question
 from apps.HistoryPlay.models.HistoryPlay import HistoryPlay
 from apps.HistoryPlay.models.Place import Place
 from apps.common.view import LoginRequiredMixin
@@ -58,6 +59,7 @@ class HistoryPlayJsonView(View, LoginRequiredMixin):
         )
         for play in history_plays:
             data.append({
+                'id':play.id,
                 'progress':play.progress,
                 'place':play.place.name,
                 'latitud':play.place.latitud,
@@ -77,4 +79,32 @@ class HistoryPlayJsonView(View, LoginRequiredMixin):
     def get(self, request, *args, **kwargs):
         response = {}
         response['places'] = self.get_history_place(request)
+        return HttpResponse(json.dumps(response))
+
+
+class QuestionJsonView(View, LoginRequiredMixin):
+
+    @csrf_exempt
+    def dispatch(self, request, *args, **kwargs):
+        return super(QuestionJsonView, self).dispatch(request, *args, **kwargs)
+
+    def get_history_place(self, place_id):
+        data = []
+        place = Place.objects.get(pk=place_id)
+        questions = Question.objects.filter(
+            place=place
+        )
+        for question in questions:
+            data.append({
+                'name':question.name,
+                'image':question.image,
+                'type':question.type,
+                'answer': []
+            })
+        return data
+
+    def get(self, request, *args, **kwargs):
+        response = {}
+        place = kwargs.get('place')
+        response['question'] = self.get_history_place(place)
         return HttpResponse(json.dumps(response))

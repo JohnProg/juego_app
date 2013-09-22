@@ -9,8 +9,8 @@ class Answer(models.Model):
         verbose_name=_(u'respuesta'),
         max_length=150,
     )
-    answer = models.ForeignKey (
-        'Answer',
+    question = models.ForeignKey (
+        'Question',
         verbose_name=_(u'Pregunta'),
         related_name='answer_set'
     )

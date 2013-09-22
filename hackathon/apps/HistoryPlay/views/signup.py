@@ -71,10 +71,3 @@ class SignUp(View):
             history_play.save()
         except:
             print('no default data')
-
-    def login_and_authenticate(self, user):
-        user = auth.authenticate(
-            username=user.username, password=user.password)
-        import pdb;pdb.set_trace()
-        if user is not None and user.is_active:
-            auth.login(self.request, user)

@@ -12,7 +12,7 @@ class Migration(SchemaMigration):
         db.create_table(u'HistoryPlay_answer', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('name', self.gf('django.db.models.fields.CharField')(max_length=150)),
-            ('answer', self.gf('django.db.models.fields.related.ForeignKey')(related_name='answer_set', to=orm['HistoryPlay.Answer'])),
+            ('question', self.gf('django.db.models.fields.related.ForeignKey')(related_name='answer_set', to=orm['HistoryPlay.Question'])),
             ('image', self.gf('django.db.models.fields.CharField')(max_length=150)),
             ('is_correct', self.gf('django.db.models.fields.BooleanField')(default=False)),
             ('created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
@@ -75,7 +75,10 @@ class Migration(SchemaMigration):
         # Adding model 'Question'
         db.create_table(u'HistoryPlay_question', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('place', self.gf('django.db.models.fields.related.ForeignKey')(related_name='question_set', to=orm['HistoryPlay.Place'])),
             ('name', self.gf('django.db.models.fields.CharField')(max_length=150)),
+            ('image', self.gf('django.db.models.fields.CharField')(max_length=150)),
+            ('type', self.gf('django.db.models.fields.IntegerField')(default=2)),
             ('created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
             ('modified', self.gf('django.db.models.fields.DateTimeField')(auto_now=True, blank=True)),
         ))
@@ -105,13 +108,13 @@ class Migration(SchemaMigration):
     models = {
         'HistoryPlay.answer': {
             'Meta': {'object_name': 'Answer'},
-            'answer': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'answer_set'", 'to': "orm['HistoryPlay.Answer']"}),
             'created': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'image': ('django.db.models.fields.CharField', [], {'max_length': '150'}),
             'is_correct': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'modified': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
-            'name': ('django.db.models.fields.CharField', [], {'max_length': '150'})
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '150'}),
+            'question': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'answer_set'", 'to': "orm['HistoryPlay.Question']"})
         },
         'HistoryPlay.category': {
             'Meta': {'object_name': 'Category'},
@@ -161,8 +164,11 @@ class Migration(SchemaMigration):
             'Meta': {'object_name': 'Question'},
             'created': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'image': ('django.db.models.fields.CharField', [], {'max_length': '150'}),
             'modified': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
-            'name': ('django.db.models.fields.CharField', [], {'max_length': '150'})
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '150'}),
+            'place': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'question_set'", 'to': "orm['HistoryPlay.Place']"}),
+            'type': ('django.db.models.fields.IntegerField', [], {'default': '2'})
         },
         u'auth.group': {
             'Meta': {'object_name': 'Group'},
