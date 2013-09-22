@@ -68,7 +68,7 @@ class HistoryPlayJsonView(View, LoginRequiredMixin):
         )
         for play in history_plays:
             data.append({
-                'id':play.id,
+                'id':play.place.id,
                 'progress':play.progress,
                 'place':play.place.name,
                 'latitud':play.place.latitud,
