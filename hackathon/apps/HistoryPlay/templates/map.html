@@ -56,6 +56,7 @@ color: white;
 border-radius: 4px;
 overflow: scroll;
 max-height: 70%;
+    right: -30%;
 }
 .min_range{
 position: absolute;
@@ -132,6 +133,17 @@ margin-top: 1.2em;
     margin-bottom: 1em;
     /* padding: 0; */
 }
+.see_options {
+    position: fixed;
+    right: 0;
+    top: 25%;
+    color: white;
+    padding: 8px;
+    background: rgb(167, 155, 155);
+    font-size: 22px;
+    font-weight: bolder;
+    border-radius: 3px 0 0 3px;
+}
 .red_find_friends > li a {
     width: 80%;
     margin: 0;
@@ -139,6 +151,21 @@ margin-top: 1.2em;
 }
     .bar_updated > span{
 
+    }
+    .close_options {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 22px;
+    background: none;
+    font-weight: bolder;
+    cursor: pointer;
+}
+    .see_options:hover{
+        color: #ffffff !important;
+    }
+    .image_score{
+        background: url("{{ STATIC_URL }}img/star.png");
     }
     </style>
 {% endblock scripts_top %}
@@ -197,17 +224,19 @@ margin-top: 1.2em;
       </div>
       <div class="modal-body">
         <p class="myModal2_p">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, inventore, iusto? Consequatur cum cumque ducimus eius error esse fuga, ipsum nihil, quae quibusdam repudiandae sed sunt, totam veniam voluptatem! Odio?
+            Una forma distinta de conocer  la historia de Lima.Visita los principales museos y sitios arqueológicos en Lima, mide tu conocimiento a través de nuestra aplicación, acumula puntos y obtén premios.
         </p>
       </div>
     </div>
     <div id='map'></div>
+    <a href="#" class="see_options"><</a>
     <aside>
         <section class="panel_fiends">
             <section class="panel_me">
                 <article>
                     <header class="title_level">
-                         <h4>Level:</h4>`
+                         <h4>Level:</h4>
+                           <span class="close_options">x</span>
                     </header>
                     <div class="progress progress-striped active">
                       <div class="bar bar_updated" style="width: 40%;"></div>
@@ -280,6 +309,16 @@ margin-top: 1.2em;
         $('#myTab a').on('click', showtab(event, $(this)));
         $('#see_only_place').on('click', only_place_function);
         $('#select_category').on('change', get_info_place);
+        $('.see_options').on('click',function(){
+            $('aside').animate({
+                'right':'5%'
+            },500);
+        });
+        $('.close_options').on('click',function(){
+            $('aside').animate({
+                'right':'-35%'
+            },500);
+        });
     }
     function showtab(event, $this){
         event.preventDefault();

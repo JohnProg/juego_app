@@ -97,6 +97,9 @@ margin-bottom: .5em;
     text-align: center;
     margin: 0;
 }
+.logo{
+    background: url("../../img/logo.jpg");
+}
 #up {
     background: rgba(155, 148, 148, 0.5);
     width: auto;
