@@ -70,7 +70,7 @@
 
       </div> <!-- /.container -->
     </div>
-
+    <div id="up">↑</div>
 {% endblock header %}
 {% block content %}
 
@@ -88,9 +88,12 @@
             $('#login_form').on('submit', login_function);
             $('#signin_form').on('submit', signin_function);
             $("#log_in").live("click", login_function);
-            $(".menu_nav_scroll .menu").on("click",function(){
+            $('.hide_message').on('focus',function(){
+                $('.msm_error').stop('true').fadeOut().text(data.message);
+            });
 
-                var seccion=$(this).attr("href");
+            $(".menu_nav_scroll .menu").on("click",function(){
+                var seccion = $(this).attr("href");
                 $("body,html").animate({
                 scrollTop:$(seccion).offset().top-40
                 },800);
@@ -133,10 +136,13 @@
                 dataType: 'json',
                 success: function (data) {
                     if (data.status === 'OK') {
-                        console.log('aaa');
+                        $('.msm_error').stop('true').fadeIn().text(data.message);
+                        setTimeout(function(){
+                            //location.reload();
+                        },1000);
                     }
                     else{
-                        $('.overlay').fadeIn().children().addClass('effect_in_out');
+                        $('.msm_error').stop('true').fadeIn().text(data.message);
                     }
                 }
             });
@@ -156,10 +162,13 @@
                 success: function (data) {
                     console.log(data.status);
                     if (data.status === 'OK') {
-                        console.log('aaa');
+                        $('.msm_error').stop('true').fadeIn().text(data.message);
+                        setTimeout(function(){
+                            //location.reload();
+                        },1000);
                     }
                     else{
-                        $('.overlay').fadeIn().children().addClass('effect_in_out');
+                        $('.msm_error').stop('true').fadeIn().text(data.message);
                     }
                 }
             });

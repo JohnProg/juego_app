@@ -27,29 +27,65 @@
     width: 100%;
 }
 .bar_options ul {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    margin: 0 2% 0 2%;
+    width: 60%;
+padding: 10px;
+list-style: none;
+text-align: center;
+margin: 0 auto;
+background: rgba(63, 56, 56, 0.45);
+border-radius: 5px;
 }
 .bar_options ul li {
     display: inline-block;
     margin: 0 1% 0 1%;
 }
 aside {
-    width: 28%;
-    height: 80%;
-    background: rgba(71, 70, 70, 0.27);
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    color: white;
-    border-radius: 4px;
+   width: 28%;
+height: 80%;
+background: rgba(25, 25, 21, 0.39);
+position: fixed;
+top: 5%;
+right: 5%;
+color: white;
+border-radius: 4px;
+overflow: scroll;
+max-height: 60%;
 }
 #distance {
     height: 20em;
+}
+.panel_fiends h4 {
+    text-align: center;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+}
+.info_fiends {
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
+}
+.info_fiends > li {
+    background: rgba(248, 248, 248, 0.81);
+    border: 1px solid rgb(178, 176, 176);
+    border-radius: 5px;
+    margin: -1px 10px;
+    color: rgb(95, 84, 84);
+    font-size: 16px;
+}
+.info_friend {
+    margin: 0;
+    position: relative;
+}
+.info_friend > li {
+    display: inline-block;
+}
+.info_friend > li:last-child {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+}
+.score {
+    font-size: 22px;
 }
 #map_place {
     height: 75% !important;
@@ -67,7 +103,23 @@ aside {
     text-align: center;
     text-transform: uppercase;
 }
-
+.red_find_friends {
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.red_find_friends > li {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    /* padding: 0; */
+}
+.red_find_friends > li a {
+    width: 80%;
+    margin: 0;
+}
     </style>
 {% endblock scripts_top %}
 
@@ -132,6 +184,13 @@ aside {
     <div id='map'></div>
     <aside>
         <section class="panel_fiends">
+            <section class="panel_me">
+                <article>
+                    <div class="progress progress-striped active">
+                      <div class="bar" style="width: 40%;"></div>
+                    </div>
+                </article>
+            </section>
             <header>
                 <h4>Tablero de Posiciones</h4>
             </header>
@@ -155,18 +214,12 @@ aside {
                         </ul>
                     </li>
                 </ul>
-                <ul>
+                <ul class="red_find_friends">
                     <li>
-                        <a href="#" class="facebook_image">Encuentra amigos en facebook</a>
-                    </li>
-                    <li>
-                        <a href="#" class="correo_image">Invitar amigos por correo</a>
+                        <a href="#" class="facebook_image btn btn-inverse">Encuentra amigos en facebook</a>
                     </li>
                 </ul>
             </article>
-        </section>
-        <section class="panel_me">
-
         </section>
     </aside>
     <footer class="bar_options">
