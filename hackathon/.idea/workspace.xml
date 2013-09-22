@@ -7,18 +7,18 @@
     <file path="$PROJECT_DIR$/../../../app_mobile/proyecto_royal_mobile/index.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379792326204" ignored="false" />
     <file path="/index.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379792325780" ignored="false" />
     <file path="$PROJECT_DIR$/../../../app_mobile/proyecto_royal_mobile/js/main_mobile.js" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379791836368" ignored="false" />
-    <file path="/base.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379810399782" ignored="false" />
+    <file path="/base.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379828654573" ignored="false" />
     <file path="/Dummy.txt" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379794738768" ignored="false" />
     <file path="/home.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379809494046" ignored="false" />
     <file path="$PROJECT_DIR$/apps/HistoryPlay/views/home.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379824468693" ignored="false" />
-    <file path="/home.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379811530566" ignored="false" />
+    <file path="/home.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379828577710" ignored="false" />
     <file path="$USER_HOME$/Workspace/royalpioneers/apps/rp/templates/website/base.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379795598925" ignored="false" />
     <file path="/mapa.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379812381885" ignored="false" />
     <file path="/local_settings.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379798582137" ignored="false" />
-    <file path="$USER_HOME$/Workspace/royalpioneers/royal/settings/local_settings.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379798582137" ignored="false" />
+    <file path="$USER_HOME$/Workspace/royalpioneers/royal/settings/local_settings.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379827822231" ignored="false" />
     <file path="/requirements.txt" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379798889023" ignored="false" />
-    <file path="$PROJECT_DIR$/static/bootstrap/css/style_web.css" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379821307985" ignored="false" />
-    <file path="/style_web.css" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379821215157" ignored="false" />
+    <file path="$PROJECT_DIR$/static/bootstrap/css/style_web.css" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379828559943" ignored="false" />
+    <file path="/style_web.css" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379827363016" ignored="false" />
     <file path="$PROJECT_DIR$/apps/HistoryPlay/urls/website.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379824468693" ignored="false" />
     <file path="/website.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379809535045" ignored="false" />
     <file path="$PROJECT_DIR$/apps/HistoryPlay/templates/templatetags/map.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379810153653" ignored="false" />
@@ -45,7 +45,7 @@
       <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="0" selection-start="5800" selection-end="5800" vertical-scroll-proportion="-3.125">
+            <state line="125" column="0" selection-start="6289" selection-end="6289" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -375,7 +375,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="0" selection-start="5800" selection-end="5800" vertical-scroll-proportion="-3.125">
+        <state line="125" column="0" selection-start="6289" selection-end="6289" vertical-scroll-proportion="-3.125">
           <folding />
         </state>
       </provider>
