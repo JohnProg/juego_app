@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from apps.HistoryPlay.models.Category import Category
 from apps.HistoryPlay.models.Profile import Profile
 from apps.HistoryPlay.models.Question import Question
+from apps.HistoryPlay.models.Answer import Answer
 from apps.HistoryPlay.models.HistoryPlay import HistoryPlay
 from apps.HistoryPlay.models.Place import Place
 from apps.common.view import LoginRequiredMixin
@@ -104,10 +105,23 @@ class QuestionJsonView(View, LoginRequiredMixin):
         )
         for question in questions:
             data.append({
+                'id':question.id,
                 'name':question.name,
                 'image':question.image,
                 'type':question.type,
-                'answer': []
+                'answer': self.get_answer(question)
+            })
+        return data
+
+    def get_answer(self,question):
+        data = []
+        answers = Answer.objects.filter(question=question)
+        for answer in answers:
+            data.append({
+                'id':answer.id,
+                'name':answer.name,
+                'image':answer.image,
+                'is_correct':answer.is_correct
             })
         return data
 
