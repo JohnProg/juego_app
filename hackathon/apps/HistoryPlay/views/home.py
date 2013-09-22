@@ -52,7 +52,10 @@ class HistoryPlayJsonView(View, LoginRequiredMixin):
     def get_history_place(self, request):
         data = []
         profile = Profile.objects.get(user=self.request.user)
-        history_plays = HistoryPlay.objects.filter(profile=profile)
+        history_plays = HistoryPlay.objects.filter(
+            profile=profile,
+            place__status=Place.STATUS_ACTIVE
+        )
         for play in history_plays:
             data.append({
                 'place':play.place.name,
