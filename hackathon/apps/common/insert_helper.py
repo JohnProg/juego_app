@@ -2,7 +2,9 @@
 
 import xlrd, json
 from django.conf import settings
+from decimal import Decimal
 from apps.HistoryPlay.models.Place import Place
+from apps.HistoryPlay.models.Category import Category
 
 
 class XlsToJsonParser(object):
@@ -25,30 +27,51 @@ class XlsToJsonParser(object):
         xls_sheet = xls_book.sheet_by_name(self.sheet)
         return xls_sheet
 
-    def parse_to_json(self):
-        """
-        Convert the xls file data to json file
-        """
+    def insert_information(self):
         self.sheet = self.xls_reader()
-
-        # Need to be implemented in the class to inherits
         self.process_xls()
 
-        initial = { 'values' : self.entities_to_insert }
-        json_path = self.ROOT_PATH[:-5] + '/apps/common/db_data/json/' + self.json + '.json'
-        file = open(json_path,'w')
-        file.write(json.dumps(initial, indent=2))
-        file.close()
+    def parse_type(self, data):
+        data = str(data)
+        data = data.replace("text:u", "")
+        data = data.replace("'", "")
+        data = data.replace("number:", "")
+        data = data.replace("\xf3", "o")
+        data = data.replace("\xe9", "e")
+        data = data.replace("\xed", "i")
+        return data
 
     def process_xls(self):
         return True
 
 
 class MuseumHelper(XlsToJsonParser):
-
     entity = Place
     xls = 'Museo'
     sheet = 'Museos Lima'
+    json = 'museo'
+
+    def process_xls(self):
+        nrows = self.sheet.nrows - 1
+        current_row = 2
+
+        while(current_row < nrows):
+            place = Place()
+            place.category = Category.objects.get(name='museos')
+            place.area = self.parse_type(self.sheet.cell(current_row,0))
+            place.description = self.parse_type(self.sheet.cell(current_row, 1))
+            place.name = self.parse_type(self.sheet.cell(current_row, 2))
+            place.address = self.parse_type(self.sheet.cell(current_row, 3))
+            place.district = self.parse_type(self.sheet.cell(current_row, 4))
+            place.phone = self.parse_type(self.sheet.cell(current_row, 5))
+            place.web_page = self.parse_type(self.sheet.cell(current_row, 6))
+            place.schedule = self.parse_type(self.sheet.cell(current_row, 7))
+            place.cost = self.parse_type(self.sheet.cell(current_row,8))
+            place.latitud = self.parse_type(self.sheet.cell(current_row, 9))
+            place.longitud = self.parse_type(self.sheet.cell(current_row,10))
+
+            place.save()
+            current_row += 1
 
     def insert(self):
-        xls = self.xls_reader()
+        self.parse_to_json()

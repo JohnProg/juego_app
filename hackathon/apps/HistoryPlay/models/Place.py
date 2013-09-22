@@ -10,7 +10,10 @@ class Place(models.Model):
         (STATUS_ACTIVE, _('activo')),
         (STATUS_INACTIVE, _('inactivo')),
     )
-
+    area = models.CharField(
+        verbose_name=_(u'Area'),
+        max_length=150,
+    )
     name = models.CharField(
         verbose_name=_(u'Nombre'),
         max_length=150,
@@ -44,10 +47,9 @@ class Place(models.Model):
         verbose_name=_(u'Horarios'),
         max_length=150,
     )
-    cost = models.DecimalField(
+    cost = models.CharField(
         verbose_name=_(u'costo'),
-        max_digits=10,
-        decimal_places=2
+        max_length=150,
     )
     latitud = models.CharField(
         verbose_name=_(u'Latitud'),
