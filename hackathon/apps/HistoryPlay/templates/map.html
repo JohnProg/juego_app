@@ -282,9 +282,6 @@ margin-top: 1.2em;
             <ul>
                 <li>
                     <select name="" id="select_category">
-                        {% for a in category %}
-                        <option value="{{ a.id }}">{{ a.name }}</option>
-                        {% endfor %}
                     </select>
                 </li>
                 <li>
@@ -304,6 +301,8 @@ margin-top: 1.2em;
     <script type="text/javascript">
     $(document).on('ready', init);
     function init(){
+        var id;
+        select_fill();
         get_info_place(event);
         drawMap();
         $('#myTab a').on('click', showtab(event, $(this)));
@@ -318,6 +317,24 @@ margin-top: 1.2em;
             $('aside').animate({
                 'right':'-35%'
             },500);
+        });
+        $('.seleccionado').on('click',function(){
+            debugger;
+            id = $(this).text();
+            debugger;
+        });
+    }
+    function select_fill(){
+        var url = '/json/category/';
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $.each(data.category, function(x, y){
+                    $('#select_category').append('<option value="y.id">'+ y.name +'</option>');
+                });
+            }
         });
     }
     function showtab(event, $this){
@@ -349,8 +366,14 @@ margin-top: 1.2em;
     }
     function get_info_place (event){
         event.preventDefault();
-        debugger;
-        var category = $('#select_category').val();
+        var category;
+        if( $('#select_category').val() == null){
+            category = 1;
+        }
+        else{
+           category = $('#select_category').val();
+        }
+
         var url = '/json/history-place/'+category+'/';
         $.ajax({
             url: url,
@@ -366,7 +389,7 @@ margin-top: 1.2em;
                           title: y.place,
                           icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
                           infoWindow: {
-                            content: y.place
+                            content: '<span class=seleccionado>'+y.id+'</span>'+y.place
                         }
                       });
                     }
@@ -376,10 +399,12 @@ margin-top: 1.2em;
                           lng: y.longitud,
                           title: y.place,
                           infoWindow: {
-                            content: y.place
+                            content: '<span class=seleccionado>'+y.id+'</span>'+y.place
                             }
                         });
                     }
+
+                    $('#select_category').html();
                 });
                 $('.bar_updated').css('width',data.places.progress);
                 console.log(data.places.progress);
