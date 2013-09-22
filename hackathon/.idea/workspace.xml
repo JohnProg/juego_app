@@ -20,7 +20,7 @@
     <file path="/_settings.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379834221993" ignored="false" />
     <file path="/settings.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379854469516" ignored="false" />
     <file path="/signup.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379837327194" ignored="false" />
-    <file path="/question.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379864968693" ignored="false" />
+    <file path="/question.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379868235732" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,7 @@
       <file leaf-file-name="question.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/question.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="201" column="13" selection-start="4236" selection-end="4236" vertical-scroll-proportion="0.35949764">
+            <state line="271" column="15" selection-start="7112" selection-end="7112" vertical-scroll-proportion="0.19937205">
               <folding>
                 <element signature="tag#div#1;tag#article#0;tag#section#0" expanded="false" />
               </folding>
@@ -802,7 +802,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878444" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878444" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3988604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -998,7 +998,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/question.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="13" selection-start="4236" selection-end="4236" vertical-scroll-proportion="0.35949764">
+        <state line="271" column="15" selection-start="7112" selection-end="7112" vertical-scroll-proportion="0.19937205">
           <folding>
             <element signature="tag#div#1;tag#article#0;tag#section#0" expanded="false" />
           </folding>

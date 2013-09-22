@@ -261,19 +261,39 @@ background-attachment: fixed;
                                         </div>');
                             }
                         });
-{#                        $('.question'+localStorage.getItem('ind')).append('#}
-{#                        <div class="row-fluid span8">\#}
-{#                                    <a href="#" class="btn btn-inverse comprobar">Conprobar</a>\#}
-{#                                    <a href="#" class="btn btn-inverse siguiente">Siguiente</a>\#}
-{#                                </div>#}
+                        debugger;
 
 
                     });
+                    $('.question4').append('<div class="row-fluid span8">\
+                                          <a href="#" class="btn btn-inverse check">Conprobar</a>\                                          <a href="#" class="btn btn-inverse siguiente">Siguiente</a>\
+                                          </div>');
                 }
             });
             $('#myTab a').click(function (e) {
               e.preventDefault();
               $(this).tab('show');
+            });
+            $('.check').on('click',function(){
+                var a;
+                $.each($('.tab-content'), function(a, b){
+                    if($(".true:checked"))a++;
+                });
+                var tabs = $('.tab-content').find('div').length;
+                a = (a/tabs)*100;
+                var place_url = location.search();
+                $.ajax({
+                    url: url,
+                    data:{
+                        'percentage': a,
+                        'place':place_url
+                    },
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+
+                    }
+                });
             });
         });
     </script>
