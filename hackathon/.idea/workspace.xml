@@ -39,13 +39,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="insert_helper.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="insert_helper.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/common/insert_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="31" selection-start="1397" selection-end="1397" vertical-scroll-proportion="0.784689">
+            <state line="45" column="0" selection-start="1241" selection-end="1241" vertical-scroll-proportion="-6.9333334">
               <folding>
                 <element signature="e#25#42#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="27" selection-start="1526" selection-end="1526" vertical-scroll-proportion="-1.981132">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -245,6 +254,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="HistoryPlay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HistoryPlay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -485,13 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="27" selection-start="1426" selection-end="1426" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hackathon/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -599,10 +623,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/common/insert_helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="31" selection-start="1397" selection-end="1397" vertical-scroll-proportion="0.784689">
+        <state line="45" column="0" selection-start="1241" selection-end="1241" vertical-scroll-proportion="-6.9333334">
           <folding>
             <element signature="e#25#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="27" selection-start="1526" selection-end="1526" vertical-scroll-proportion="-1.981132">
+          <folding />
         </state>
       </provider>
     </entry>

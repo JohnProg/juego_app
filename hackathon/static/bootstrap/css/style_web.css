@@ -1,0 +1,83 @@
+.navbar-wrapper > .container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+.navbar-inner {
+    border-radius: 0 !important;
+}
+#section1 {
+    height: 50em;
+    width: 100%;
+}
+#myCarousel {
+    height: 100%;
+}
+.item {
+    height: 100%;
+}
+.item img{
+    height: 100% !important;
+}
+.carousel-inner {
+    height: 100%;
+}
+.section {
+    mmargin: 0 auto;
+width: 100%;
+text-align: center;
+padding-top: 4em;
+background: rgb(240, 240, 240);
+padding-bottom: 5em;
+    height: 40em;
+}
+.section img {
+    width: 30%;
+    float: left;
+}
+.carousel-caption {
+    width: 39%;
+    bottom: 25%;
+    left: 12%;
+    background: rgba(82, 78, 78, 0.19);
+}
+.carousel-caption h1 {
+    font-size: 31px;
+    text-align: center;
+}
+.lead {
+    font-size: 21px;
+    line-height: 29px !important;
+    margin-bottom: 3% !important;
+}
+.modal-backdrop.fade.in {
+    background: #34495e !important;
+}
+.input-prepend {
+    display: block !important;
+}
+#login_form {
+    width: 100%;
+    text-align: center;
+}
+.span12 {
+    width: 100%;
+    margin: 0;
+    margin-top: 3%;
+}
+.section > article {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 80%; text-align: center;
+    margin-top: 2em;
+}
+.section > article > p {
+    text-align: justify;
+}
+#myModal1 .btn.btn-inverse {
+    width: 50%;
+}
+#myModal2 .btn.btn-inverse {
+    width: 50%;
+}
