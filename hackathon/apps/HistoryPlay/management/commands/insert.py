@@ -27,7 +27,7 @@ class Command(BaseCommand):
 
         if entity == 'all':
             self.insert_category()
-            # self.insert_arqueologia()
+            self.insert_museos()
             # self.insert_momnumentos()
             # self.insert_museo()
 
@@ -55,7 +55,7 @@ class Command(BaseCommand):
         else:
             if Place.objects.filter(category=category_museo).count() == 0:
                 criterion_category_helper = MuseumHelper()
-                criterion_category_helper.insert()
+                criterion_category_helper.insert_information()
                 self.stdout.write('Successfully inserted data: criterion category. \n')
             else:
                 self.stdout.write('can not insert the data: criterion category. \n')

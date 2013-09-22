@@ -18,20 +18,19 @@
 
                 <div class="input-prepend">
                   <span class="add-on"><icon class="icon-white icon-user"></icon></span>
-                  <input type="text" placeholder="Username"/>
+                  <input type="text" placeholder="Username" id="loguser"/>
                 </div>
                 <div class="input-prepend">
-                  <span class="add-on">*</span>
-                  <input type="password" placeholder="******"/>
+                  <span class="add-on">$</span>
+                  <input type="password" placeholder="******" id="logpass"/>
                 </div>
-              <div class="modal-footer">
+            <div class="modal-footer">
                 <div class="span12">
-                    <input type="submit" value="Login" class="btn btn-inverse"/>
-                </div>
-              </div>
+                <input type="submit" value="Login" class="btn btn-inverse"/>
+                    </div>
+            </div>
           </form>
       </div>
-
     </div>
 
     <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
@@ -42,10 +41,12 @@
       <div class="modal-body">
           <form action="" id="signin_form">
               <label for="">Username</label>
-              <input type="text" placeholder="Username"/>
+              <input type="text" placeholder="Username" id="username" />
+              <label for="">Email</label>
+              <input type="email" placeholder="Email"  id="email" />
               <label for="">Password</label>
-              <input type="password"/>
-              <input type="submit" value="Sign In" class="btn btn-inverse"/>
+              <input type="password" id="password"/>
+              <input type="submit" value="Sign In" class="btn btn-inverse"  />
           </form>
       </div>
       <div class="modal-footer">

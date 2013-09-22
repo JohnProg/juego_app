@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+import json
+from django.contrib import messages, auth
+from django.contrib.auth.models import User
+from django.views.generic.base import View
+from django.contrib.auth.hashers import make_password
+from django.http import Http404, HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.core.exceptions import ObjectDoesNotExist
+
+
+class SignUp(View):
+    MSG_ERR_EMAIL_EXIST = 'The email you entered already exist.'
+    MSG_ERR_REGISTRATION_FAILED = 'Registration is not possible right now.'
+    MSG_ERR_MANUFACTURER_NAME_EXIST = 'Manufacturer Name already taken.'
+
+    @csrf_exempt
+    def dispatch(self, request, *args, **kwargs):
+        return super(SignUp, self).dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        response = {}
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        try:
+            user = User.objects.get(email=email )
+            if user:
+                response['status'] = 'ERROR'
+                response['message'] = 'correo ya existe'
+                return HttpResponse(json.dumps(response))
+        except ObjectDoesNotExist:
+            pass
+
+        try:
+            user = User.objects.get(username=username)
+            if user:
+                response['status'] = 'ERROR'
+                response['message'] = 'username ya existe'
+                return HttpResponse(json.dumps(response))
+        except:
+            pass
+        #password = make_password(password)
+        user = User.objects.create_user(username, email, password)
+        self.login_and_authenticate(user)
+
+        response['status'] = 'OK'
+        response['message'] = 'Bienvenido'
+        return HttpResponse(json.dumps(response))
+
+    def login_and_authenticate(self, user):
+        user = auth.authenticate(
+            username=user.username, password=user.password)
+        if user is not None and user.is_active:
+            auth.login(self.request, user)

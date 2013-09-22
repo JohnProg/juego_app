@@ -73,6 +73,7 @@
 
 {% endblock header %}
 {% block content %}
+
 {% endblock content %}
 {% block footer %}
     <footer>
@@ -85,7 +86,7 @@
         function init(){
 
             $('#login_form').on('submit', login_function);
-            $('#signin_form').on('submit', login_function);
+            $('#signin_form').on('submit', signin_function);
             $("#log_in").live("click", login_function);
             $(".menu_nav_scroll .menu").on("click",function(){
 
@@ -118,22 +119,44 @@
         }
 
 
-        function login_function (event){
+        function signin_function (event){
             event.preventDefault();
-            var url = '/mobile/login_buyer/';
+            var url = '/sign_up/';
             $.ajax({
                 url: url,
                 data: {
                     password: $('#password').val(),
-                    email: $('#username').val()
+                    username: $('#username').val(),
+                    email: $('#email').val()
+                },
+                type: 'POST',
+                dataType: 'json',
+                success: function (data) {
+                    if (data.status === 'OK') {
+                        console.log('aaa');
+                    }
+                    else{
+                        $('.overlay').fadeIn().children().addClass('effect_in_out');
+                    }
+                }
+            });
+        }
+
+        function login_function (event){
+            event.preventDefault();
+            var url = '/login/';
+            $.ajax({
+                url: url,
+                data: {
+                    password: $('#loguser').val(),
+                    email: $('#logpass').val()
                 },
                 type: 'POST',
                 dataType: 'json',
                 success: function (data) {
                     console.log(data.status);
                     if (data.status === 'OK') {
-                        $.mobile.navigate( "#pagina2" );
-                        getInventoryItems();
+                        console.log('aaa');
                     }
                     else{
                         $('.overlay').fadeIn().children().addClass('effect_in_out');

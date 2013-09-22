@@ -10,7 +10,7 @@
     <file path="/base.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379810399782" ignored="false" />
     <file path="/Dummy.txt" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379794738768" ignored="false" />
     <file path="/home.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379809494046" ignored="false" />
-    <file path="$PROJECT_DIR$/apps/HistoryPlay/views/home.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379810594138" ignored="false" />
+    <file path="$PROJECT_DIR$/apps/HistoryPlay/views/home.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379824468693" ignored="false" />
     <file path="/home.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379811530566" ignored="false" />
     <file path="$USER_HOME$/Workspace/royalpioneers/apps/rp/templates/website/base.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379795598925" ignored="false" />
     <file path="/mapa.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379812381885" ignored="false" />
@@ -19,7 +19,7 @@
     <file path="/requirements.txt" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379798889023" ignored="false" />
     <file path="$PROJECT_DIR$/static/bootstrap/css/style_web.css" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379821307985" ignored="false" />
     <file path="/style_web.css" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379821215157" ignored="false" />
-    <file path="$PROJECT_DIR$/apps/HistoryPlay/urls/website.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379810612569" ignored="false" />
+    <file path="$PROJECT_DIR$/apps/HistoryPlay/urls/website.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379824468693" ignored="false" />
     <file path="/website.py" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379809535045" ignored="false" />
     <file path="$PROJECT_DIR$/apps/HistoryPlay/templates/templatetags/map.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379810153653" ignored="false" />
     <file path="/map.html" changelist="d0ce8db3-bf08-4f46-aa7b-26b0a2a8c2bd" time="1379824337780" ignored="false" />
@@ -45,7 +45,7 @@
       <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="0" selection-start="5637" selection-end="5637" vertical-scroll-proportion="-3.125">
+            <state line="116" column="0" selection-start="5800" selection-end="5800" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
       <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -375,14 +375,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="0" selection-start="5637" selection-end="5637" vertical-scroll-proportion="-3.125">
+        <state line="116" column="0" selection-start="5800" selection-end="5800" vertical-scroll-proportion="-3.125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/HistoryPlay/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
