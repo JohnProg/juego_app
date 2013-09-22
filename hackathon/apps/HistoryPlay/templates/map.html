@@ -329,7 +329,7 @@ margin-top: 1.2em;
                     </select>
                 </li>
                 <li>
-                    <a href="{% url 'question' 2 %}" class="btn btn-inverse"><i class="icon-white icon-user"></i>Play</a>
+                    <a href="" id='play' class="btn btn-inverse"><i class="icon-white icon-user"></i>Play</a>
                 </li>
                 <li>
                     <a href="#myModal1" role="button" data-toggle="modal" id='see_only_place' class="btn btn-inverse"><i class="icon-white icon-user"></i>See Place</a>
@@ -368,6 +368,7 @@ margin-top: 1.2em;
         $('.seleccionado').on('click',function(){
             id = $(this).text();
         });
+        $('#play').on('click',play);
     }
     function select_fill(){
         var url = '/json/category/';
@@ -382,6 +383,12 @@ margin-top: 1.2em;
             }
         });
     }
+    function play (event){
+        event.preventDefault();
+        var id_select = $('.seleccionado').text()
+        location.href = '/question/'+id_select;
+    }
+
     function only_place_function (event){
         event.preventDefault();
         var id_select = $('.seleccionado').text()

@@ -174,15 +174,17 @@ class SaveGameJsonView(LoginRequiredMixin, View):
             if percentaje == 100:
                 history_plays.status = HistoryPlay.STATUS_COMPLETE
                 history_plays.progress = 100
+                #import pdb;pdb.set_trace()
                 step = int(history_plays.place.step)
                 step = step +1
+                #import pdb;pdb.set_trace()
                 place = Place.objects.get(step=step)
                 next_play = HistoryPlay()
                 next_play.profile = profile
                 next_play.place = place
                 next_play.progress = 0
                 next_play.save()
-
+            #import pdb;pdb.set_trace()
             if history_plays.progress < percentaje:
                 history_plays.progress = percentaje
             history_plays.save()
@@ -198,7 +200,7 @@ class SaveGameJsonView(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         response = {}
-        place = kwargs.get('place')
-        percentaje = kwargs.get('percentaje')
+        place = request.GET.get('place')
+        percentaje = request.GET.get('percentaje')
         response['question'] = self.save_game(place,percentaje)
         return HttpResponse(json.dumps(response))

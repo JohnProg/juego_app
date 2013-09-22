@@ -261,8 +261,6 @@ background-attachment: fixed;
                                         </div>');
                             }
                         });
-                        debugger;
-
 
                     });
                     $('.question4').append('<div class="row-fluid span8">\
@@ -274,24 +272,29 @@ background-attachment: fixed;
               e.preventDefault();
               $(this).tab('show');
             });
-            $('.check').on('click',function(){
-                var a;
+            $('.check').live('click',function(){
+                 localStorage.setItem('puntaje',0 );
                 $.each($('.tab-content'), function(a, b){
                     if($(".true:checked"))a++;
+                    localStorage.setItem('puntaje',a );
                 });
                 var tabs = $('.tab-content').find('div').length;
-                a = (a/tabs)*100;
-                var place_url = location.search();
+                a = parseInt(localStorage.getItem('puntaje'))
+                a = (a/4)*100;
+                var url = '/save-game';
+                var place_url = location.pathname.split("/")[2];
+
                 $.ajax({
                     url: url,
                     data:{
-                        'percentage': a,
+                        'percentaje': a,
                         'place':place_url
                     },
                     type: 'GET',
                     dataType: 'json',
                     success: function (data) {
-
+                   
+                        location.href = '/map/'
                     }
                 });
             });
