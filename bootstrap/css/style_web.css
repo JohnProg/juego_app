@@ -1,0 +1,146 @@
+.navbar-wrapper > .container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+.navbar-inner {
+    border-radius: 0 !important;
+}
+.navbar.navbar-inverse {
+    background: #34495e !important;
+}
+#section1 {
+    height: 50em;
+    width: 100%;
+}
+#myCarousel {
+    height: 100%;
+}
+.navbar-inner {
+    background: #34495e !important;
+}
+.nav-collapse.collapse {
+    width: 100%; background: #34495e !important; height: 3.2em;
+}
+.item {
+    height: 100%;
+}
+.carousel-inner {
+    height: 100%;
+}
+.carousel-control {
+    z-index: 9;
+}
+.btn.btn-large.btn-inverse {
+    z-index: 9;
+}
+.section {
+    margin: 0 auto;
+width: 100%;
+text-align: center;
+padding-top: 4em;
+background: rgb(240, 240, 240);
+padding-bottom: 5em;
+    height: 40em;
+}
+.section img {
+    width: 26%;
+float: left;
+padding-right: 3em;
+}
+.msm_error {
+    display: block;
+    margin-top: 2em;
+}
+.carousel-caption {
+    width: 45%;
+bottom: 25%;
+left: 12%;
+background: rgba(82, 78, 78, 0.14);
+}
+#signin_form {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+#myModalLabel {
+    text-align: center;
+    text-transform: uppercase;
+    padding: .5em 0 .5em 0;
+}
+.carousel-caption h1 {
+    font-size: 3em;
+text-align: center;
+margin-bottom: .5em;
+    color: white;
+}
+.img {
+    height: 100%;
+    width: 100%;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat;
+}
+.lead {
+    font-size: 21px;
+    line-height: 29px !important;
+    margin-bottom: 3% !important;
+}
+.modal-backdrop.fade.in {
+    background: #34495e !important;
+}
+.input-prepend {
+    display: block !important;
+}
+#login_form {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.logo{
+    background: url("../../img/logo.jpg");
+}
+#up {
+    background: rgba(155, 148, 148, 0.5);
+    width: auto;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 35px;
+    font-weight: bolder;
+    border-radius: 5px 0 0 0;
+    cursor: pointer;
+    color: rgb(73, 68, 68);
+}
+.span12 {
+    width: 100%;
+margin: 0 auto;
+margin-top: 3%;
+text-align: center;
+}
+.section > article {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 80%; text-align: center;
+    margin-top: 2em;
+}
+.section > article > p {
+    text-align: justify;
+}
+#myModal1 .btn.btn-inverse {
+    width: 50%;
+}
+#myModal2 .btn.btn-inverse {
+    width: 50%;
+}
+.overlay{
+    background: rgba(83, 71, 22, 0.14) url(../../img/01.png) repeat;
+    width: 100%;
+    height: 50em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b403985-cc21-4f12-b262-7ea0ed56793e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lima360/settings.py" afterPath="$PROJECT_DIR$/lima360/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lima360/urls.py" afterPath="$PROJECT_DIR$/lima360/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lima360/wsgi.py" afterPath="$PROJECT_DIR$/lima360/wsgi.py" />
     </list>
     <ignored path="lima.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0b403985-cc21-4f12-b262-7ea0ed56793e" time="1380219304352" ignored="false" />
     <file path="/.gitignore" changelist="0b403985-cc21-4f12-b262-7ea0ed56793e" time="1380221798121" ignored="false" />
-    <file path="/settings.py" changelist="0b403985-cc21-4f12-b262-7ea0ed56793e" time="1380223216462" ignored="false" />
+    <file path="/settings.py" changelist="0b403985-cc21-4f12-b262-7ea0ed56793e" time="1380225711431" ignored="false" />
+    <file path="/Procfile" changelist="0b403985-cc21-4f12-b262-7ea0ed56793e" time="1380225370124" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,30 +32,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="__settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lima360/__settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="38" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lima360/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="12" selection-start="119" selection-end="131" vertical-scroll-proportion="34.35484">
+            <state line="2" column="12" selection-start="91" selection-end="95" vertical-scroll-proportion="-0.9677419">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Procfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="26" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wsgi.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lima360/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.7407407">
+            <state line="7" column="9" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lima360/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="18" selection-start="384" selection-end="390" vertical-scroll-proportion="0.28892455">
               <folding>
-                <element signature="e#661#710#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,8 +89,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/lima360/settings.py" />
         <option value="$PROJECT_DIR$/lima360/wsgi.py" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/lima360/urls.py" />
+        <option value="$PROJECT_DIR$/lima360/settings.py" />
       </list>
     </option>
   </component>
@@ -159,6 +174,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lima" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lima" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -171,6 +200,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps" />
       <recent name="$PROJECT_DIR$/lima360" />
     </key>
   </component>
@@ -236,6 +266,26 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lima" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="lima" type="Python.DjangoServer" factoryName="Django server">
@@ -365,6 +415,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/image1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lima360/__settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="38" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
@@ -372,23 +427,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/image1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lima360/settings.py">
+    <entry file="file://$PROJECT_DIR$/lima360/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="119" selection-end="131" vertical-scroll-proportion="34.35484">
+        <state line="7" column="9" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lima360/wsgi.py">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.7407407">
+        <state line="0" column="0" selection-start="0" selection-end="26" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lima360/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="91" selection-end="95" vertical-scroll-proportion="-0.9677419">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lima360/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="18" selection-start="384" selection-end="390" vertical-scroll-proportion="0.28892455">
           <folding>
-            <element signature="e#661#710#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
