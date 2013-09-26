@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b403985-cc21-4f12-b262-7ea0ed56793e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lima360/settings.py" afterPath="$PROJECT_DIR$/lima360/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lima360/urls.py" afterPath="$PROJECT_DIR$/lima360/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lima.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,13 +58,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lima360/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="40" selection-start="425" selection-end="425" vertical-scroll-proportion="0.2294854">
+            <state line="7" column="0" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="5" selection-start="9" selection-end="9" vertical-scroll-proportion="0.02086231">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,11 +96,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/lima360/wsgi.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/lima360/settings.py" />
         <option value="$PROJECT_DIR$/lima360/urls.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -406,13 +416,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="20" selection-start="49" selection-end="49" vertical-scroll-proportion="0.090771556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/img/image1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -446,12 +449,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lima360/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="425" selection-end="425" vertical-scroll-proportion="0.2294854">
+        <state line="7" column="0" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="9" selection-end="9" vertical-scroll-proportion="0.02086231">
+          <folding />
         </state>
       </provider>
     </entry>
