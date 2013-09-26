@@ -4,6 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 PROJECT_ROOT = realpath(join(dirname(__file__), '../..'))
 ROOT_PATH = realpath(join(dirname(__file__), '..'))
+print(ROOT_PATH)
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
