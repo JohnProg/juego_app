@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b403985-cc21-4f12-b262-7ea0ed56793e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/HistoryPlay/migrations/0001_initial.py" afterPath="" />
-    </list>
+    <list default="true" id="0b403985-cc21-4f12-b262-7ea0ed56793e" name="Default" comment="" />
     <ignored path="lima.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0b403985-cc21-4f12-b262-7ea0ed56793e" time="1380219304352" ignored="false" />
