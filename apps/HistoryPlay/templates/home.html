@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load common_tags %}
+
+{% block header %}
+    {{ block.super }}
+{% endblock header%}
+{% block content %}
+
+    <!-- Modal -->
+    <div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Log In</h3>
+      </div>
+      <div class="modal-body">
+          <form action="" id="login_form">
+                <div class="input-prepend">
+                  <span class="add-on"><icon class="icon-white icon-user"></icon></span>
+                  <input type="text" placeholder="Username" id="loguser" class="hide_message"/>
+                </div>
+                <div class="input-prepend">
+                  <span class="add-on">*</span>
+                  <input type="password" placeholder="******" id="logpass" class="hide_message"/>
+                </div>
+            <div class="modal-footer">
+                <div class="span12">
+                    <input type="submit" value="Login" class="btn btn-inverse"/>
+                    <span class="msm_error"></span>
+                </div>
+            </div>
+          </form>
+      </div>
+    </div>
+
+    <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Sign Up</h3>
+      </div>
+      <div class="modal-body">
+          <form action="" id="signin_form">
+              <div class="input-prepend">
+                    <span class="add-on"><icon class="icon-white icon-user"></icon></span>
+                    <input type="text" placeholder="Username" id="username" class="hide_message"/>
+              </div>
+              <div class="input-prepend">
+                    <span class="add-on"><icon class="icon-white icon-user"></icon></span>
+                    <input type="email" placeholder="Email"  id="email" class="hide_message"/>
+              </div>
+                <div class="input-prepend">
+                  <span class="add-on">*</span>
+                <input type="password" id="password" class="hide_message"/>
+              </div>
+              <div class="modal-footer">
+                  <div class="span12">
+                    <input type="submit" value="Sign Up" class="btn btn-inverse"  />
+                      <span class="msm_error"></span>
+                  </div>
+              </div>
+          </form>
+      </div>
+    </div>
+    <section id='section1'>
+        <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active left">
+          <img src="" alt=""/>
+          <div class="img" style="background: url('{{ STATIC_URL }}img/image1.jpg')"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>DIVIERTETE Y APRENDE.</h1>
+              <p class="lead">Una forma distinta de conocer  la historia de Lima.Visita los principales museos y sitios arqueológicos en Lima, mide tu conocimiento a través de nuestra aplicación, acumula puntos y obtén premios.</p>
+              <a class="btn btn-large btn-inverse" href="#">Sign up today</a>
+            </div>
+          </div>
+        </div>
+        <div class="item next left">
+            <img src="" alt=""/>
+          <div class="img" style="background: url('{{ STATIC_URL }}img/image3.jpg')"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Museo de la Nación.</h1>
+              <p class="lead">El Museo de la Nación es uno de los museos más importantes de la historia de Lima, Comparte importancia y prestigio con el Museo Nacional de Antropología, Arqueología e Historia del Perú.</p>
+              <a class="btn btn-large btn-inverse" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+            <img src="" alt=""/>
+          <div class="img" style="background: url('{{ STATIC_URL }}img/image2.jpg')"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Guia del estudiante.</h1>
+              <p class="lead">Te brindamos información de las principales rutas turísticas a diferentes museos y sitios arqueologicos.</p>
+              <a class="btn btn-large btn-inverse" href="#">Browse gallery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+        <div class="overlay"></div>
+    </div>
+    </section>
+    <section id="section2" class="section">
+        <header>
+            <h1>What is this?</h1>
+        </header>
+        <article>
+            <img src="{{ STATIC_URL }}img/image1.jpg" alt=""/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, explicabo, pariatur dolore natus modi corporis tempora at laboriosam voluptatem et iusto culpa corrupti officiis rem cupiditate amet obcaecati! Dicta, sapiente.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, explicabo, pariatur dolore natus modi corporis tempora at laboriosam voluptatem et iusto culpa corrupti officiis rem cupiditate amet obcaecati! Dicta, sapiente.</p>
+        </article>
+    </section>
+    <section id='section3' class="section">
+        <header>
+            <h1>About Us</h1>
+        </header>
+        <article>
+            <img src="{{ STATIC_URL }}img/image2.jpg" alt=""/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, explicabo, pariatur dolore natus modi corporis tempora at laboriosam voluptatem et iusto culpa corrupti officiis rem cupiditate amet obcaecati! Dicta, sapiente.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, explicabo, pariatur dolore natus modi corporis tempora at laboriosam voluptatem et iusto culpa corrupti officiis rem cupiditate amet obcaecati! Dicta, sapiente.</p>
+        </article>
+    </section>
+{% endblock content %}
