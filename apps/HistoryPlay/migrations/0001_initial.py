@@ -11,8 +11,8 @@ class Migration(SchemaMigration):
         # Adding model 'Answer'
         db.create_table(u'HistoryPlay_answer', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=150)),
             ('question', self.gf('django.db.models.fields.related.ForeignKey')(related_name='answer_set', to=orm['HistoryPlay.Question'])),
+            ('name', self.gf('django.db.models.fields.CharField')(max_length=150)),
             ('image', self.gf('django.db.models.fields.CharField')(max_length=150)),
             ('is_correct', self.gf('django.db.models.fields.BooleanField')(default=False)),
             ('created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
