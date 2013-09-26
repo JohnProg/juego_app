@@ -33,6 +33,9 @@ class Command(BaseCommand):
             self.insert_question()
             self.insert_answer()
 
+        if entity == 'category':
+            self.insert_category()
+
         if entity == 'museo':
             self.insert_museos()
 
