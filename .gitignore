@@ -4,3 +4,4 @@ staticfiles
 .init
 lima360/_settings.py
 .idea
+_heroku_settings.py
