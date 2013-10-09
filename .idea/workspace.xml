@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lima360/__settings.py" afterPath="$PROJECT_DIR$/lima360/_settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lima.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" time="1381302234199" ignored="false" />
-    <file path="/.gitignore" changelist="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" time="1381303362563" ignored="false" />
+    <file path="/.gitignore" changelist="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" time="1381303972840" ignored="false" />
     <file path="/README.md" changelist="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" time="1381302689782" ignored="false" />
     <file path="/settings.py" changelist="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" time="1381303399775" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,7 +78,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="19" selection-start="65" selection-end="65" vertical-scroll-proportion="0.12517385">
+            <state line="6" column="8" selection-start="61" selection-end="61" vertical-scroll-proportion="0.12517385">
               <folding />
             </state>
           </provider>
@@ -511,7 +511,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="65" selection-end="65" vertical-scroll-proportion="0.12517385">
+        <state line="6" column="8" selection-start="61" selection-end="61" vertical-scroll-proportion="0.12517385">
           <folding />
         </state>
       </provider>
