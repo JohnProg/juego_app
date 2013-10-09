@@ -3,3 +3,4 @@ env
 staticfiles
 .init
 lima360/_settings.py
+.idea
