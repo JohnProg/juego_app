@@ -1,0 +1,303 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load common_tags %}
+
+{% block scripts_top %}
+    {{ block.super }}
+    <style type="text/css">
+    #myModal2 > div > h1{
+        font-size: 30px;
+       text-align: center;
+    text-transform: uppercase;
+    }
+    .myModal2_p {
+    width: 80%;
+    margin: 0 auto;
+        font-size: 17px;
+        padding-bottom: 1em;
+    }
+ #map,#map_place {
+    margin: 0 auto;width: 100%;
+    height: 100% !important;
+    position: absolute !important;
+}
+.bar_options {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+.bar_options ul {
+    width: 60%;
+padding: 10px;
+list-style: none;
+text-align: center;
+margin: 0 auto;
+background: rgba(63, 56, 56, 0.45);
+border-radius: 5px;
+}
+.bar_options ul li {
+    display: inline-block;
+    margin: 0 1% 0 1%;
+}
+aside {
+   width: 28%;
+height: 80%;
+background: rgba(25, 25, 21, 0.39);
+position: fixed;
+top: 5%;
+right: 5%;
+color: white;
+border-radius: 4px;
+overflow: scroll;
+max-height: 60%;
+}
+#distance {
+    height: 20em;
+}
+.panel_fiends h4 {
+    text-align: center;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+}
+.info_fiends {
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
+}
+.info_fiends > li {
+    background: rgba(248, 248, 248, 0.81);
+    border: 1px solid rgb(178, 176, 176);
+    border-radius: 5px;
+    margin: -1px 10px;
+    color: rgb(95, 84, 84);
+    font-size: 16px;
+}
+.info_friend {
+    margin: 0;
+    position: relative;
+}
+.info_friend > li {
+    display: inline-block;
+}
+.info_friend > li:last-child {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+}
+.score {
+    font-size: 22px;
+}
+#map_place {
+    height: 75% !important;
+    left: 0;
+    width: 90% !important;
+    position: relative !important;
+    padding: 0em;
+    border-radius: 5px;
+    border: 3px solid #34495e;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#distance h3 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.red_find_friends {
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.red_find_friends > li {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    /* padding: 0; */
+}
+.red_find_friends > li a {
+    width: 80%;
+    margin: 0;
+}
+    article {
+    width: 80%;
+        background: rgba(247, 247, 247, 0.96);
+    margin: 5% auto;
+    min-height: 20em;
+    overflow: hidden;
+        border-radius: 10px;
+box-shadow: 0 1px 5px rgb(138, 120, 120), 1px 2px 5px rgb(223, 220, 220);
+}
+.tab-content {
+    min-height: 15em;
+    border: none !important;
+}
+section{
+    margin: 0;
+padding: 0;
+    height: 100%;
+position: absolute;
+width: 100%;
+background: url('http://vilmanunez.com/wp-content/uploads/2013/07/encuestas-642x325.png') no-repeat center center;
+background-size: cover;
+background-attachment: fixed;
+}
+.alternativa_1 {
+    margin: 7em;
+}
+    .alternative {
+    margin: 2% 0 3% 3%;
+}
+.row-fluid.span8 {
+    text-align: center;
+}
+.option_alternatives {
+}
+    </style>
+{% endblock scripts_top %}
+
+{% block header %}
+{% endblock header%}
+
+{% block content %}
+    <section>
+        <article>
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="active"><a href="#q1">Question 1</a></li>
+          <li><a href="#q2">Question 2</a></li>
+          <li><a href="#q3">Question 3</a></li>
+          <li><a href="#q4">Question 4</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="q1">
+              <form>
+                  <header>
+                      <h4 class="question1"></h4>
+                  </header>
+               </form>
+          </div>
+          <div class="tab-pane" id="q2">
+               <form>
+                  <header>
+                      <h4 class="question2"></h4>
+                  </header>
+               </form>
+          </div>
+          <div class="tab-pane" id="q3">
+               <form>
+                  <header>
+                      <h4 class="question3"></h4>
+                  </header>
+               </form>
+          </div>
+          <div class="tab-pane" id="q4">
+               <form>
+                  <header>
+                      <h4 class="question4"></h4>
+                  </header>
+               </form>
+          </div>
+        </div>
+            <div class="tab-content">
+              <div class="tab-pane active" id="q1">
+                  <form>
+                      <header>
+                          <h4 class="question"></h4>
+                      </header>
+                   </form>
+              </div>
+              <div class="tab-pane" id="q2">
+                   <form>
+                      <header>
+                          <h4 class="question"></h4>
+                      </header>
+                   </form>
+              </div>
+              <div class="tab-pane" id="q3">
+                   <form>
+                      <header>
+                          <h4 class="question"></h4>
+                      </header>
+                   </form>
+              </div>
+              <div class="tab-pane" id="q4">
+                   <form>
+                      <header>
+                          <h4 class="question"></h4>
+                      </header>
+                   </form>
+              </div>
+            </div>
+        </article>
+    </section>
+
+{% endblock content %}
+{% block scripts_bottom %}
+    <script type="text/javascript">
+
+        $(document).on('ready',function(){
+            var url = '/json/question/52';
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+
+                    $.each(data.question, function(a, b){
+                        $('#q'+(a+1)).find('.question'+(a+1)).text(b.name);
+                        localStorage.setItem('type', b.type);
+                        localStorage.setItem('ind',(a+1));
+                        $.each(b.answer, function(x, y){
+                            if(localStorage.getItem('type') == "1"){
+                                $('.question'+localStorage.getItem('ind')).append("<div class='option_alternatives'>\
+                                    <input type='radio' name='group1' value="+ y.id +" class='+ y.is_correct+'>"+y.name+"<br>\
+                                    </div");
+                            }
+                            else{
+                                $('.question'+localStorage.getItem('ind')).append('<div class="option_alternatives">\
+                                    <input type="radio" name="group1" value='+ y.id +' class='+ y.is_correct+'>+"y.name"+<br>\
+                                        </div>');
+                            }
+                        });
+
+                    });
+                    $('.question4').append('<div class="row-fluid span8">\
+                                          <a href="#" class="btn btn-inverse check">Conprobar</a>\                                          <a href="#" class="btn btn-inverse siguiente">Siguiente</a>\
+                                          </div>');
+                }
+            });
+            $('#myTab a').click(function (e) {
+              e.preventDefault();
+              $(this).tab('show');
+            });
+            $('.check').live('click',function(){
+                 localStorage.setItem('puntaje',0 );
+                $.each($('.tab-content'), function(a, b){
+                    if($(".true:checked"))a++;
+                    localStorage.setItem('puntaje',a );
+                });
+                var tabs = $('.tab-content').find('div').length;
+                a = parseInt(localStorage.getItem('puntaje'))
+                a = (a/4)*100;
+                var url = '/save-game';
+                var place_url = location.pathname.split("/")[2];
+
+                $.ajax({
+                    url: url,
+                    data:{
+                        'percentaje': a,
+                        'place':place_url
+                    },
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                   
+                        location.href = '/map/'
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock scripts_bottom %}
