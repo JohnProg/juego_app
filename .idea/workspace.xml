@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lima360/_heroku_settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/HistoryPlay/templates/admin/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/HistoryPlay/templates/admin/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lima360/__settings.py" afterPath="$PROJECT_DIR$/lima360/__settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lima360/settings.py" afterPath="$PROJECT_DIR$/lima360/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lima.iws" />
@@ -71,10 +66,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__settings.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="__settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lima360/__settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.28097984">
+            <state line="8" column="10" selection-start="257" selection-end="257" vertical-scroll-proportion="-4.8">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="5" selection-start="45" selection-end="45" vertical-scroll-proportion="0.10431154">
               <folding />
             </state>
           </provider>
@@ -111,9 +115,9 @@
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/admin/base.html" />
         <option value="$PROJECT_DIR$/apps/HistoryPlay/templates/admin/dashboard.html" />
         <option value="$PROJECT_DIR$/lima360/_heroku_settings.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/lima360/__settings.py" />
         <option value="$PROJECT_DIR$/lima360/settings.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -484,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="74" selection-end="74" vertical-scroll-proportion="0.12517385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lima360/_heroku_settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="169" column="0" selection-start="5898" selection-end="5898" vertical-scroll-proportion="-101.4">
@@ -507,7 +504,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lima360/__settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.28097984">
+        <state line="8" column="10" selection-start="257" selection-end="257" vertical-scroll-proportion="-4.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="5" selection-start="45" selection-end="45" vertical-scroll-proportion="0.10431154">
           <folding />
         </state>
       </provider>

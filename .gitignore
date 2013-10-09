@@ -2,6 +2,6 @@ env
 *.pyc
 staticfiles
 .init
-lima360/_settings.py
+settings.py
 .idea
 _heroku_settings.py
