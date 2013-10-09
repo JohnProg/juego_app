@@ -1,39 +1,24 @@
 # -*- coding: utf-8 -*-
 
 from django.conf.urls import url, patterns
-from apps.HistoryPlay.views import home as h
-from apps.HistoryPlay.views import signup as s
-from apps.HistoryPlay.views import logout as o
-from apps.HistoryPlay.views import login as l
+from apps.HistoryPlay.views.website import home
+from apps.HistoryPlay.views.website import login
+from apps.HistoryPlay.views.website import logout
+from apps.HistoryPlay.views.website import signup
 
 urlpatterns = patterns('',
-    url(r'^sign_up/$', s.SignUp.as_view(),
-        name='sign_up'),
-    url(r'^login/$',l.LoginView.as_view(),
-        name='login'),
-    url(r'^logout/$',o.LogoutView.as_view(),
-        name='logout'),
-    url(r'^$', h.HomeVIe.as_view(),
+
+    #Home views
+    url(r'^$', home.HomeVIe.as_view(),
         name='home'),
-    url(r'^map/$', h.MapRoute.as_view(),
-        name='map'),
-    url(r'^question/(?P<place>\d+)$', h.QuestionView.as_view(),
-        name='question'),
 
-    #JSON RESPONSE
-    url(r'^json/history-place/(?P<category>\d+)/$',
-        h.HistoryPlayJsonView.as_view(),
-        name='json-history-play'),
+    url(r'^sign_up/$', signup.SignUp.as_view(),
+        name='sign_up'),
 
-    url(r'^json/question/(?P<place>\d+)/$',
-        h.QuestionJsonView.as_view(),
-        name='json-question-place'),
+    url(r'^login/$', login.LoginView.as_view(),
+        name='login'),
 
-    url(r'^json/category/$',
-        h.CategoryJsonView.as_view(),
-        name='json-category'),
+    url(r'^logout/$', logout.LogoutView.as_view(),
+        name='logout'),
 
-    url(r'^save-game/$',
-        h.SaveGameJsonView.as_view(),
-        name='save-game')
 )

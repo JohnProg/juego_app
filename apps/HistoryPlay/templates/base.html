@@ -159,7 +159,7 @@
                     if (data.status === 'OK') {
                         $('.msm_error').stop('true').fadeIn().text(data.message);
                         setTimeout(function(){
-                           location.href = '/map';
+                           location.href = '/player/map';
                         },1000);
                     }
                     else{
@@ -185,7 +185,7 @@
                     if (data.status === 'OK') {
                         $('.msm_error').stop('true').fadeIn().text(data.message);
                         setTimeout(function(){
-                            location.href = '/map/1';
+                            location.href = '/player/map/1';
                         },1000);
                     }
                     else{
