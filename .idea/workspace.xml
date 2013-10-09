@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/css/style_web.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/img/glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/img/glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="lima.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" time="1381302234199" ignored="false" />
     <file path="/.gitignore" changelist="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" time="1381302282761" ignored="false" />
+    <file path="/README.md" changelist="bd8ec9ac-6697-4008-865b-cc75d2f5c43e" time="1381302689782" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +46,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -263,6 +257,13 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="5" selection-start="54" selection-end="54" vertical-scroll-proportion="0.10431154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="180" selection-start="450" selection-end="450" vertical-scroll-proportion="0.29745042">
           <folding />
         </state>
       </provider>
