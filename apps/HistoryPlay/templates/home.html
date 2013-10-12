@@ -6,7 +6,7 @@
     {{ block.super }}
 {% endblock header%}
 {% block content %}
-
+<div ng-app='websiteapp' ng-controller='websiteController'>
     <!-- Modal -->
     <div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
       <div class="modal-header">
@@ -123,4 +123,26 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, explicabo, pariatur dolore natus modi corporis tempora at laboriosam voluptatem et iusto culpa corrupti officiis rem cupiditate amet obcaecati! Dicta, sapiente.</p>
         </article>
     </section>
+</div>
 {% endblock content %}
+
+{% block scripts_bottom %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/apps/website/app.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/apps/website/controllers/controller.js"></script>
+
+    <script type="text/javascript">
+
+        angular.module('websiteapp').value('userUrl',{
+            loginUrl : "{% url 'login' %}",
+            signupUrl: "{% url 'sign_up' %}",
+            logoutUrl: "{% url 'logout' %}",
+            adminUrl: "{% url 'admin_dashboard' %}",
+            playerUrl : "{% url 'map' %}"
+        });
+
+        angular.module('websiteapp').value('csrfToken',{
+           csrfToken: '{{ csrf_token }}'
+        });
+    </script>
+{% endblock scripts_bottom %}
+

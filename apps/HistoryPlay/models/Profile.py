@@ -15,11 +15,12 @@ class Profile(models.Model):
         max_length=150,
     )
     user = models.ForeignKey(
-        User
+        User,
+        unique=True
     )
 
     def __unicode__(self):
         return self.name
 
     class Meta:
-        app_label='HistoryPlay'
+        app_label = 'HistoryPlay'

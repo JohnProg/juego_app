@@ -243,14 +243,24 @@ from django.utils.decorators import method_decorator
 
 
 class LoginRequiredMixin(object):
+    superAdmin = False
 
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.request = request
 
         if self.request.user.is_authenticated():
-            return super(LoginRequiredMixin, self).dispatch(
-                            self.request, *args, **kwargs)
+            if self.superAdmin:
+                #Superadmin validate
+                if self.request.user.is_superuser:
+                    return super(LoginRequiredMixin, self).dispatch(
+                                self.request, *args, **kwargs)
+                else:
+                    return super(LoginRequiredMixin, self).dispatch(
+                        request, *args, **kwargs)
+            else:
+                return super(LoginRequiredMixin, self).dispatch(
+                                self.request, *args, **kwargs)
         else:
             return super(LoginRequiredMixin, self).dispatch(
                 request, *args, **kwargs)

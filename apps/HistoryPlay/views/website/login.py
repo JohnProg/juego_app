@@ -24,6 +24,7 @@ class LoginView(View):
             auth.login(self.request, user)
             response['status'] = 'OK'
             response['message'] = 'Login successfully'
+            response['access'] = False
         else:
             response['status'] = 'ERROR'
             response['message'] = 'Incorrect Email or Password'

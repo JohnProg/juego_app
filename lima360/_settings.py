@@ -24,6 +24,7 @@ DATABASES = {
     }
 }
 
+AUTH_PROFILE_MODULE = 'accounts.Profile'
 PANEL_PAGE_SIZE = 10
 DEFAULT_PAGE_SIZE = 10
 LOGIN_URL = '/login/'
