@@ -4,8 +4,8 @@ Proyecto elaborado para la Hackathon Lima
 Desarrolladores:
 --------------
 
-Jonathan Carrasco Garcia
-John Machahuay Giraldo
+- Jonathan Carrasco Garcia
+- John Machahuay Giraldo
 
 Puesto #12
 ----------
